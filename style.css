@@ -1,0 +1,330 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#fafafa;
+    color:#333;
+}
+
+/* Header */
+
+header{
+    background:#df4b4b;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1200px;
+    margin:auto;
+}
+
+nav h1{
+    color:#fff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("image/hero.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+}
+
+.hero h2{
+    font-size:48px;
+}
+
+.hero p{
+    margin:20px 0;
+}
+
+/* Button */
+
+.btn{
+    background:#0076ac;
+    color:#fff;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    display:inline-block;
+}
+
+/* Sections */
+
+section{
+    padding:60px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* Cards */
+
+#products{
+    padding:50px 8%;
+    text-align:center;
+}
+
+.products-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    margin-top:30px;
+}
+
+.card{
+    width:220px;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+}
+
+.card-link{
+    text-decoration:none;
+    color:inherit;
+}
+/* About */
+
+#about p{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+}
+
+/* Contact */
+
+#contact{
+    text-align:center;
+}
+
+#contact a{
+    color:#ff4081;
+    text-decoration:none;
+    font-weight:600;
+}
+
+#contact a:hover{
+    text-decoration:underline;
+}
+
+/* Footer */
+
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+/* ========================= */
+/* Mobile Responsive Design  */
+/* ========================= */
+
+@media screen and (max-width:768px){
+
+header{
+    padding:10px;
+}
+
+nav{
+    flex-direction:column;
+    text-align:center;
+}
+
+nav h1{
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+nav ul li{
+    margin:5px;
+}
+
+.hero{
+    height:70vh;
+    padding:20px;
+}
+
+.hero h2{
+    font-size:30px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.btn{
+    padding:10px 20px;
+    font-size:16px;
+}
+
+section{
+    padding:40px 20px;
+}
+
+.products-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.card{
+    width:100%;
+}
+
+.card img{
+    height:170px;
+}
+
+.card h3{
+    font-size:16px;
+}
+
+#about p{
+    font-size:15px;
+}
+
+#contact p{
+    font-size:15px;
+}
+
+footer{
+    font-size:14px;
+}
+}
+
+
+/* Small Mobile */
+
+@media screen and (max-width:480px){
+
+.hero{
+    height:60vh;
+}
+
+.hero h2{
+    font-size:24px;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+.products-container{
+    grid-template-columns:1fr;
+}
+
+.card img{
+    height:220px;
+}
+
+nav h1{
+    font-size:22px;
+}
+
+nav ul{
+    flex-direction:column;
+}
+
+nav ul li{
+    margin:6px 0;
+}
+}
+/* Product Details */
+
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card{
+    width: 220px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3{
+    padding: 15px;
+    color: #333;
+}
+
+.card-link{
+    text-decoration: none;
+    color: inherit;
+}

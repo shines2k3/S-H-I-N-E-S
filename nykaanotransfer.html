@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nykaa Matte to Last No Transfer Long Lasting Lipstick</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=JjUWg81c718ySIAIn5a3dUYC31QEqgyhE8ISUqu33Q0quJbpsqpWKJBFDkthUqwko2aqtT8FZ7BHw26UIwiaZfJls8wbdXg1qu_iV9P6uGZlN1KbE2NQyP9mJqHEVA5Y_Q6nv8lM66APCv_eulXerIHKgiWYjfm6q4OEudzPxKQpIOxgApRrJvEBiPR4UqnqEP4o63jwZK9EIArhlJp2KvZIC6wYkM7IjFvMDyrl-gezvT3fbBxHm_cLoCd-tRpcuYI_VJNb8nen8UgycWGl3Pnjr9Cp9aOac5CNAWEGDB-Pl-xwiCud8arNNqdZWrhu" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDhmYzA4MjA4OGJmMzIxNjI5NTExNDg0YSZmbj1ueWthYS5odG1sJmNkPWF0dGFjaG1lbnQmdHM9NDk1NzMxJnA9ZnMmY2lkPTEmc2lnPWRhNTVkMTdmY2M1MDFiYzdiOWE5ZmEzM2NjMWQyYWVhMDYxZDA5NGY1ODM4YjBlNGU2MTNjNGU1NGMzYmExYTkmdj0w"/><style>
+body{font-family:Arial,sans-serif;background:#f5f5f5;margin:0}
+.product{max-width:1100px;margin:40px auto;background:#fff;padding:30px;border-radius:12px;display:flex;gap:40px;box-shadow:0 5px 15px rgba(0,0,0,.15)}
+img{width:420px;max-width:100%;border-radius:10px}
+.price del{color:#888}.price span{color:#e91e63;font-size:28px;font-weight:bold}
+select{width:320px;padding:10px;font-size:16px}
+.btn{display:inline-block;margin-top:20px;background:#25D366;color:#fff;padding:12px 22px;border-radius:25px;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="product">
+<div><img id="productImage" src="nykaalipstick1/nykaanotransfer.jpeg"></div>
+<div>
+<h1>Nykaa Matte to Last No Transfer Long Lasting Lipstick</h1>
+<p class="price"><del>₹599</del> <span>₹470</span></p>
+<p>Selected Shade: <b id="shadeName">Mum Taj</b></p>
+<select id="shade">
+<option>Mum Taj</option>
+<option>Chai</option>
+<option>Maharani</option>
+<option>Boho</option>
+<option>Bombae</option>
+<option>Kashi</option>
+<option>Madras Kaapi</option>
+<option>Maithili</option>
+<option>Jhumki</option>
+<option>Mishti</option>
+</select><br>
+<a id="orderBtn" class="btn" href="#">Order on WhatsApp</a>
+</div>
+</div>
+<script>
+const shade = document.getElementById("shade");
+const img = document.getElementById("productImage");
+const nameEl = document.getElementById("shadeName");
+const btn = document.getElementById("orderBtn");
+
+const shadeImages = {
+    "Mum Taj":"nykaalipstick1/Mum Taj.jpeg",
+    "Chai":"nykaalipstick1/Chai.jpeg",
+    "Maharani":"nykaalipstick1/Maharani.jpeg",
+    "Boho":"nykaalipstick1/Boho.jpeg",
+    "Bombae":"nykaalipstick1/Bombae.jpeg",
+    "Kashi":"nykaalipstick1/Kashi.jpeg",
+    "Madras Kaapi":"nykaalipstick1/Madras Kaapi.jpeg",
+    "Maithili":"nykaalipstick1/Maithili.jpeg",
+    "Jhumki":"nykaalipstick1/Jhumki.jpeg",
+    "Mishti":"nykaalipstick1/Mishti.jpeg",
+};
+
+function update(){
+
+    const s = shade.value;
+
+    img.src = shadeImages[s];
+
+    nameEl.textContent = s;
+
+    btn.href =
+    "https://wa.me/919526112374?text=" +
+    encodeURIComponent(
+    "Hi, I want to order Nykaa Matte to Last No Transfer Long Lasting Lipstick\nShade: " + s
+    );
+}
+
+shade.addEventListener("change", update);
+
+update();
+
+</script>
+</body>
+</html>
