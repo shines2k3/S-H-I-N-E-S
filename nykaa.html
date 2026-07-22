@@ -3,24 +3,152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nykaa So Creme Lipstick</title>
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=JjUWg81c718ySIAIn5a3dUYC31QEqgyhE8ISUqu33Q0quJbpsqpWKJBFDkthUqwko2aqtT8FZ7BHw26UIwiaZfJls8wbdXg1qu_iV9P6uGZlN1KbE2NQyP9mJqHEVA5Y_Q6nv8lM66APCv_eulXerIHKgiWYjfm6q4OEudzPxKQpIOxgApRrJvEBiPR4UqnqEP4o63jwZK9EIArhlJp2KvZIC6wYkM7IjFvMDyrl-gezvT3fbBxHm_cLoCd-tRpcuYI_VJNb8nen8UgycWGl3Pnjr9Cp9aOac5CNAWEGDB-Pl-xwiCud8arNNqdZWrhu" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDhmYzA4MjA4OGJmMzIxNjI5NTExNDg0YSZmbj1ueWthYS5odG1sJmNkPWF0dGFjaG1lbnQmdHM9NDk1NzMxJnA9ZnMmY2lkPTEmc2lnPWRhNTVkMTdmY2M1MDFiYzdiOWE5ZmEzM2NjMWQyYWVhMDYxZDA5NGY1ODM4YjBlNGU2MTNjNGU1NGMzYmExYTkmdj0w"/><style>
-body{font-family:Arial,sans-serif;background:#f5f5f5;margin:0}
-.product{max-width:1100px;margin:40px auto;background:#fff;padding:30px;border-radius:12px;display:flex;gap:40px;box-shadow:0 5px 15px rgba(0,0,0,.15)}
-img{width:420px;max-width:100%;border-radius:10px}
-.price del{color:#888}.price span{color:#e91e63;font-size:28px;font-weight:bold}
-select{width:320px;padding:10px;font-size:16px}
-.btn{display:inline-block;margin-top:20px;background:#25D366;color:#fff;padding:12px 22px;border-radius:25px;text-decoration:none}
+
+<title>Nykaa So Creme! Creamy Matte Lipstick</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+padding:20px;
+}
+
+.product{
+max-width:1100px;
+margin:auto;
+background:#fff;
+padding:30px;
+border-radius:12px;
+display:flex;
+gap:40px;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.product img{
+width:100%;
+max-width:380px;
+border-radius:10px;
+display:block;
+margin:auto;
+}
+
+.details{
+flex:1;
+}
+
+h1{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.price{
+margin:15px 0;
+font-size:20px;
+}
+
+.price del{
+color:#888;
+margin-right:10px;
+}
+
+.price span{
+color:#e91e63;
+font-size:30px;
+font-weight:bold;
+}
+
+select{
+width:100%;
+max-width:320px;
+padding:12px;
+font-size:16px;
+margin-top:10px;
+border-radius:6px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 28px;
+background:#25D366;
+color:#fff;
+text-decoration:none;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+}
+
+@media(max-width:768px){
+
+.product{
+flex-direction:column;
+padding:20px;
+}
+
+.product img{
+max-width:280px;
+}
+
+h1{
+font-size:24px;
+text-align:center;
+}
+
+.price,
+p{
+text-align:center;
+}
+
+select{
+max-width:100%;
+}
+
+.btn{
+display:block;
+width:100%;
+text-align:center;
+}
+
+}
+
 </style>
+
 </head>
+
 <body>
+
 <div class="product">
-<div><img id="productImage" src="nykaalipstick/On Fire.jpg"></div>
-<div>
+
+<img id="productImage"
+src="nykaalipstick/On Fire.jpeg"
+alt="Nykaa Lipstick">
+
+<div class="details">
+
 <h1>Nykaa So Creme! Creamy Matte Lipstick</h1>
-<p class="price"><del>₹329</del> <span>₹299</span></p>
-<p>Selected Shade: <b id="shadeName">On Fire</b></p>
+
+<p class="price">
+<del>₹329</del>
+<span>₹299</span>
+</p>
+
+<p>
+Selected Shade :
+<b id="shadeName">On Fire</b>
+</p>
+
+<br>
+
 <select id="shade">
+
 <option>On Fire</option>
 <option>Pretty In Pink</option>
 <option>Sittin Pretty</option>
@@ -54,71 +182,79 @@ select{width:320px;padding:10px;font-size:16px}
 <option>Dressed to Kill</option>
 <option>Traffic Jammin</option>
 <option>TGIF</option>
-</select><br>
-<a id="orderBtn" class="btn" href="#">Order on WhatsApp</a>
+
+</select>
+
+<br>
+
+<a id="orderBtn" class="btn" href="#">
+Order on WhatsApp
+</a>
+
 </div>
+
 </div>
 <script>
-const shade = document.getElementById("shade");
-const img = document.getElementById("productImage");
-const nameEl = document.getElementById("shadeName");
-const btn = document.getElementById("orderBtn");
+const shade=document.getElementById("shade");
+const img=document.getElementById("productImage");
+const nameEl=document.getElementById("shadeName");
+const btn=document.getElementById("orderBtn");
 
-const shadeImages = {
-    "On Fire":"nykaalipstick/On Fire.jpeg",
-    "Pretty In Pink":"nykaalipstick/Pretty In Pink.jpeg",
-    "Sittin Pretty":"nykaalipstick/Sittin Pretty.jpeg",
-    "Red Moment":"nykaalipstick/Red Moment.jpeg",
-    "Lowkey Flex":"nykaalipstick/Lowkey Flex.jpeg",
-    "Wine Grind":"nykaalipstick/Wine Grind.jpeg",
-    "Walk the Walk":"nykaalipstick/Walk the Walk.jpeg",
-    "Break a Leg":"nykaalipstick/Break a Leg.jpeg",
-    "Deja Nude":"nykaalipstick/Deja Nude.jpeg",
-    "Wakeup Makeup":"nykaalipstick/Wakeup Makeup.jpeg",
-    "It's a Date":"nykaalipstick/It's a Date.jpeg",
-    "Bon Appetit Baby":"nykaalipstick/Bon Appetit Baby.jpg",
-    "PHAT":"nykaalipstick/PHAT.jpeg",
-    "Plum Luck":"nykaalipstick/Plum Luck.jpeg",
-    "Hits Different":"nykaalipstick/Hits Different.jpeg",
-    "Brownie Points":"nykaalipstick/Brownie Points.jpeg",
-    "Slaycation":"nykaalipstick/Slaycation.jpeg",
-    "Vibing Solo":"nykaalipstick/Vibing Solo.jpeg",
-    "Bounce Back":"nykaalipstick/Bounce Back.jpeg",
-    "For The Gram":"nykaalipstick/For The Gram.jpeg",
-    "It's A Vibe":"nykaalipstick/It's A Vibe.jpeg",
-    "Rumor Has It":"nykaalipstick/Rumor Has It.jpeg",
-    "Like a Boss":"nykaalipstick/Like a Boss.jpeg",
-    "Nailed It":"nykaalipstick/Nailed It.jpeg",
-    "Pep Talk":"nykaalipstick/Pep Talk.jpeg",
-    "You're Latte":"nykaalipstick/You're Latte.jpeg",
-    "Day Dreaming":"nykaalipstick/Day Dreaming.jpeg",
-    "Gossip Dose":"nykaalipstick/Gossip Dose.jpeg",
-    "Let it Snooze":"nykaalipstick/Let it Snooze.jpeg",
-    "Game On":"nykaalipstick/Game On.jpeg",
-    "Dressed to Kill":"nykaalipstick/Dressed to Kill.jpeg",
-    "Traffic Jammin":"nykaalipstick/Traffic Jammin.jpeg",
-    "TGIF":"nykaalipstick/TGIF.jpeg"
+const shadeImages={
+
+"On Fire":"nykaalipstick/On Fire.jpeg",
+"Pretty In Pink":"nykaalipstick/Pretty In Pink.jpeg",
+"Sittin Pretty":"nykaalipstick/Sittin Pretty.jpeg",
+"Red Moment":"nykaalipstick/Red Moment.jpeg",
+"Lowkey Flex":"nykaalipstick/Lowkey Flex.jpeg",
+"Wine Grind":"nykaalipstick/Wine Grind.jpeg",
+"Walk the Walk":"nykaalipstick/Walk the Walk.jpeg",
+"Break a Leg":"nykaalipstick/Break a Leg.jpeg",
+"Deja Nude":"nykaalipstick/Deja Nude.jpeg",
+"Wakeup Makeup":"nykaalipstick/Wakeup Makeup.jpeg",
+"It's a Date":"nykaalipstick/It's a Date.jpeg",
+"Bon Appetit Baby":"nykaalipstick/Bon Appetit Baby.jpg",
+"PHAT":"nykaalipstick/PHAT.jpeg",
+"Plum Luck":"nykaalipstick/Plum Luck.jpeg",
+"Hits Different":"nykaalipstick/Hits Different.jpeg",
+"Brownie Points":"nykaalipstick/Brownie Points.jpeg",
+"Slaycation":"nykaalipstick/Slaycation.jpeg",
+"Vibing Solo":"nykaalipstick/Vibing Solo.jpeg",
+"Bounce Back":"nykaalipstick/Bounce Back.jpeg",
+"For The Gram":"nykaalipstick/For The Gram.jpeg",
+"It's A Vibe":"nykaalipstick/It's A Vibe.jpeg",
+"Rumor Has It":"nykaalipstick/Rumor Has It.jpeg",
+"Like a Boss":"nykaalipstick/Like a Boss.jpeg",
+"Nailed It":"nykaalipstick/Nailed It.jpeg",
+"Pep Talk":"nykaalipstick/Pep Talk.jpeg",
+"You're Latte":"nykaalipstick/You're Latte.jpeg",
+"Day Dreaming":"nykaalipstick/Day Dreaming.jpeg",
+"Gossip Dose":"nykaalipstick/Gossip Dose.jpeg",
+"Let it Snooze":"nykaalipstick/Let it Snooze.jpeg",
+"Game On":"nykaalipstick/Game On.jpeg",
+"Dressed to Kill":"nykaalipstick/Dressed to Kill.jpeg",
+"Traffic Jammin":"nykaalipstick/Traffic Jammin.jpeg",
+"TGIF":"nykaalipstick/TGIF.jpeg"
+
 };
 
 function update(){
 
-    const s = shade.value;
+const s=shade.value;
 
-    img.src = shadeImages[s];
+img.src=shadeImages[s];
+nameEl.textContent=s;
 
-    nameEl.textContent = s;
+btn.innerHTML="Order on WhatsApp";
+btn.style.background="#25D366";
+btn.style.pointerEvents="auto";
 
-    btn.href =
-    "https://wa.me/919526112374?text=" +
-    encodeURIComponent(
-    "Hi, I want to order Nykaa So Creme Lipstick\nShade: " + s
-    );
+btn.href="https://wa.me/919526112374?text="+encodeURIComponent(
+"Hi, I want to order Nykaa So Creme! Creamy Matte Lipstick\nShade : "+s
+);
+
 }
 
-shade.addEventListener("change", update);
+shade.addEventListener("change",update);
 
 update();
-
-</script>
-</body>
-</html>
