@@ -10,6 +10,18 @@ body{
     color:#333;
 }
 
+/* Entrance animations — only applied on mobile via the media query below */
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(24px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 /* Header */
 
 header{
@@ -44,6 +56,40 @@ nav ul li{
 nav a{
     color:#fff;
     text-decoration:none;
+}
+
+/* Hamburger toggle — hidden by default, only shown on mobile below */
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:26px;
+    height:20px;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    z-index:1100;
+}
+
+.menu-toggle span{
+    display:block;
+    height:3px;
+    width:100%;
+    background:#fff;
+    border-radius:3px;
+    transition:transform .35s ease, opacity .25s ease;
+}
+
+.menu-toggle.active span:nth-child(1){
+    transform:translateY(8.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2){
+    opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+    transform:translateY(-8.5px) rotate(-45deg);
 }
 
 /* Hero */
@@ -176,32 +222,59 @@ footer{
 @media screen and (max-width:768px){
 
 header{
-    padding:10px;
+    padding:10px 15px;
 }
 
 nav{
-    flex-direction:column;
-    text-align:center;
+    flex-direction:row;
+    text-align:left;
+    position:relative;
 }
 
 nav h1{
-    font-size:26px;
-    margin-bottom:10px;
+    font-size:22px;
+    margin-bottom:0;
+}
+
+.menu-toggle{
+    display:flex;
 }
 
 nav ul{
-    flex-wrap:wrap;
+    position:fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    width:min(70%,280px);
+    background:#df4b4b;
+    flex-direction:column;
     justify-content:center;
-    gap:10px;
+    align-items:flex-start;
+    gap:24px;
+    padding:40px;
+    box-shadow:-6px 0 20px rgba(0,0,0,.2);
+    transform:translateX(100%);
+    transition:transform .4s ease;
+    z-index:1050;
+}
+
+nav ul.open{
+    transform:translateX(0);
 }
 
 nav ul li{
-    margin:5px;
+    margin:0;
+    width:100%;
+}
+
+nav ul li a{
+    font-size:1.05rem;
 }
 
 .hero{
     height:70vh;
     padding:20px;
+    animation:fadeInUp .8s ease both;
 }
 
 .hero h2{
@@ -226,6 +299,21 @@ section{
     grid-template-columns:repeat(2,1fr);
     gap:15px;
 }
+
+.products-container .card{
+    opacity:0;
+    animation:fadeInUp .6s ease forwards;
+}
+
+.products-container .card:nth-child(1){ animation-delay:.05s; }
+.products-container .card:nth-child(2){ animation-delay:.1s; }
+.products-container .card:nth-child(3){ animation-delay:.15s; }
+.products-container .card:nth-child(4){ animation-delay:.2s; }
+.products-container .card:nth-child(5){ animation-delay:.25s; }
+.products-container .card:nth-child(6){ animation-delay:.3s; }
+.products-container .card:nth-child(7){ animation-delay:.35s; }
+.products-container .card:nth-child(8){ animation-delay:.4s; }
+.products-container .card:nth-child(9){ animation-delay:.45s; }
 
 .card{
     width:100%;
@@ -299,7 +387,7 @@ nav ul li{
     margin-top: 30px;
 }
 
-.card{
+.cards .card{
     width: 220px;
     background: #fff;
     border-radius: 10px;
@@ -309,22 +397,22 @@ nav ul li{
     transition: 0.3s;
 }
 
-.card:hover{
+.cards .card:hover{
     transform: translateY(-8px);
 }
 
-.card img{
+.cards .card img{
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
 
-.card h3{
+.cards .card h3{
     padding: 15px;
     color: #333;
 }
 
-.card-link{
+.cards .card-link{
     text-decoration: none;
     color: inherit;
 }
