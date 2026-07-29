@@ -22,6 +22,22 @@ header{
     color:#fff;
     text-align:center;
     padding:20px;
+    position:relative;
+}
+
+.back-link{
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#fff;
+    text-decoration:none;
+    font-size:26px;
+    line-height:1;
+}
+
+.back-link:hover{
+    opacity:.8;
 }
 
 h2{
@@ -69,6 +85,12 @@ h2{
     margin-bottom:20px;
 }
 
+.product-link{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
+
 .btn{
     display:inline-block;
     margin-top:10px;
@@ -91,411 +113,578 @@ h2{
 <body>
 
 <header>
+    <a href="diecastcars.html" class="back-link" aria-label="Back to Diecast Cars">&#8592;</a>
     <h1>HOT WHEELS COLLECTION</h1>
 </header>
 
 
 <div class="cards">
-
-    <!-- Donut Drifter -->
     <div class="card">
-        <img src="hotwheels/donut.jpeg" alt="Hot Wheels Donut Drifter">
-
-        <h3>Hot Wheels Donut Drifter</h3>
-
-        <p>
-            <del>₹199</del><br>
-            <b style="color:red;">₹179</b>
-        </p>
-
+        <a href="hot-wheels-donut-drifter.html" class="product-link">
+            <img src="hotwheels/donut.jpeg" alt="Hot Wheels Donut Drifter">
+            <h3>Hot Wheels Donut Drifter</h3>
+            <p>
+                <del>&#8377;199</del><br>
+                <b style="color:red;">&#8377;179</b>
+            </p>
+        </a>
         <a href="#" class="btn"
            onclick="orderCar('Hot Wheels Donut Drifter')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- porschetaycan-->
     <div class="card">
-        <img src="hotwheels/porschetaycan.jpeg" alt="porschetaycan">
-
-        <h3>Hot Wheels Porsche Taycan Turbo S</h3>
-
-        <p>
-            <del>₹595</del><br>
-            <b style="color:red;">₹399</b>
-        </p>
-
+        <a href="hot-wheels-porsche-taycan-turbo-s.html" class="product-link">
+            <img src="hotwheels/porschetaycan.jpeg" alt="Hot Wheels Porsche Taycan Turbo S">
+            <h3>Hot Wheels Porsche Taycan Turbo S</h3>
+            <p>
+                <del>&#8377;595</del><br>
+                <b style="color:red;">&#8377;399</b>
+            </p>
+        </a>
         <a href="#" class="btn"
            onclick="orderCar('Hot Wheels Porsche Taycan Turbo S')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- Hot Wheels High-Tail Chaser -->
     <div class="card">
-        <img src="hotwheels/hightail.jpeg" alt="Hot Wheels High-Tail Chaser">
-
-        <h3>Hot Wheels High-Tail Chaser</h3>
-
-        <p>
-            <del>₹329</del><br>
-            <b style="color:red;">₹249</b>
-        </p>
-
+        <a href="hot-wheels-high-tail-chaser.html" class="product-link">
+            <img src="hotwheels/hightail.jpeg" alt="Hot Wheels High-Tail Chaser">
+            <h3>Hot Wheels High-Tail Chaser</h3>
+            <p>
+                <del>&#8377;329</del><br>
+                <b style="color:red;">&#8377;249</b>
+            </p>
+        </a>
         <a href="#" class="btn"
            onclick="orderCar('Hot Wheels High-Tail Chaser')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- The Dark Knight Batmobile -->
     <div class="card">
-        <img src="hotwheels/darkknight.jpeg" alt="Hot Wheels Premium Car">
-
-        <h3>Hot Wheels The Dark Knight Batmobile</h3>
-
-        <p>
-            <del>₹603</del><br>
-            <b style="color:red;">₹369</b>
-        </p>
-
+        <a href="hot-wheels-the-dark-knight-batmobile.html" class="product-link">
+            <img src="hotwheels/darkknight.jpeg" alt="Hot Wheels The Dark Knight Batmobile">
+            <h3>Hot Wheels The Dark Knight Batmobile</h3>
+            <p>
+                <del>&#8377;603</del><br>
+                <b style="color:red;">&#8377;369</b>
+            </p>
+        </a>
         <a href="#" class="btn"
            onclick="orderCar('Hot Wheels The Dark Knight Batmobile')">
             Order on WhatsApp
         </a>
     </div>
- <!-- 24/Seven-->
+
     <div class="card">
-        <img src="hotwheels/seven.jpeg" alt="24/Sevenr">
-
-        <h3>Hot Wheels 24/Seven</h3>
-
-        <p>
-            <del>₹350</del><br>
-            <b style="color:red;">₹339</b>
-        </p>
-
+        <a href="hot-wheels-24-seven.html" class="product-link">
+            <img src="hotwheels/seven.jpeg" alt="Hot Wheels 24/Seven">
+            <h3>Hot Wheels 24/Seven</h3>
+            <p>
+                <del>&#8377;350</del><br>
+                <b style="color:red;">&#8377;339</b>
+            </p>
+        </a>
         <a href="#" class="btn"
            onclick="orderCar('Hot Wheels 24/Seven')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- Drift Box-->
     <div class="card">
-        <img src="hotwheels/drift.jpeg" alt="Drift Box">
-
-        <h3>Hot Wheels Drift Box</h3>
-
-        <p>
-            <del>₹595</del><br>
-            <b style="color:red;">₹399</b>
-        </p>
-
+        <a href="hot-wheels-drift-box.html" class="product-link">
+            <img src="hotwheels/drift.jpeg" alt="Hot Wheels Drift Box">
+            <h3>Hot Wheels Drift Box</h3>
+            <p>
+                <del>&#8377;595</del><br>
+                <b style="color:red;">&#8377;399</b>
+            </p>
+        </a>
         <a href="#" class="btn"
            onclick="orderCar('Hot Wheels Drift Box')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- 83 Chevy Silverado -->
     <div class="card">
-        <img src="hotwheels/chevysiverado.jpeg" alt="83 Chevy Silverado">
-
-        <h3>Hot Wheels 83 Chevy Silverado</h3>
-
-        <p>
-            <del>₹269</del><br>
-            <b style="color:red;">₹249</b>
-        </p>
-
+        <a href="hot-wheels-83-chevy-silverado.html" class="product-link">
+            <img src="hotwheels/chevysiverado.jpeg" alt="Hot Wheels 83 Chevy Silverado">
+            <h3>Hot Wheels 83 Chevy Silverado</h3>
+            <p>
+                <del>&#8377;269</del><br>
+                <b style="color:red;">&#8377;249</b>
+            </p>
+        </a>
         <a href="#" class="btn"
            onclick="orderCar('Hot Wheels 83 Chevy Silverado')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- 69 Chevelle -->
     <div class="card">
-        <img src="hotwheels/69Chevelle.jpeg" alt="69 Cheveller">
-
-        <h3>Hot Wheels 69 Chevelle  </h3>
-
-        <p>
-            <del>₹299</del><br>
-            <b style="color:red;">₹289</b>
-        </p>
-
+        <a href="hot-wheels-69-chevelle.html" class="product-link">
+            <img src="hotwheels/69Chevelle.jpeg" alt="Hot Wheels 69 Chevelle">
+            <h3>Hot Wheels 69 Chevelle</h3>
+            <p>
+                <del>&#8377;299</del><br>
+                <b style="color:red;">&#8377;289</b>
+            </p>
+        </a>
         <a href="#" class="btn"
-           onclick="orderCar('Hot Wheels 69 Chevelle ')">
+           onclick="orderCar('Hot Wheels 69 Chevelle')">
             Order on WhatsApp
         </a>
     </div>
-     <!-- Cupra e-Racer -->
+
     <div class="card">
-        <img src="hotwheels/Cupra e-Racer.jpeg" alt="Hot Wheels Cupra e-Racerr">
-
-        <h3>Hot Wheels Cupra e-Racer</h3>
-
-        <p>
-            <del>₹319</del><br>
-            <b style="color:red;">₹249</b>
-        </p>
-
+        <a href="hot-wheels-cupra-e-racer.html" class="product-link">
+            <img src="hotwheels/Cupra e-Racer.jpeg" alt="Hot Wheels Cupra e-Racer">
+            <h3>Hot Wheels Cupra e-Racer</h3>
+            <p>
+                <del>&#8377;319</del><br>
+                <b style="color:red;">&#8377;249</b>
+            </p>
+        </a>
         <a href="#" class="btn"
            onclick="orderCar('Hot Wheels Cupra e-Racer')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!--Corvette Grand Sport-->
     <div class="card">
-        <img src="hotwheels/Corvette Grand Sport.jpeg" alt="Hot Wheels Corvette Grand Sport">
-
-        <h3>Hot Wheels Corvette Grand Sport</h3>
-
-        <p>
-            <del>₹369</del><br>
-            <b style="color:red;">₹349</b>
-        </p>
-
+        <a href="hot-wheels-corvette-grand-sport.html" class="product-link">
+            <img src="hotwheels/Corvette Grand Sport.jpeg" alt="Hot Wheels Corvette Grand Sport">
+            <h3>Hot Wheels Corvette Grand Sport</h3>
+            <p>
+                <del>&#8377;369</del><br>
+                <b style="color:red;">&#8377;349</b>
+            </p>
+        </a>
         <a href="#" class="btn"
            onclick="orderCar('Hot Wheels Corvette Grand Sport')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- Hot Wheels Lotus Cortina -->
     <div class="card">
-        <img src="hotwheels/Lotus Cortina.jpeg" alt="Hot Wheels Lotus Cortina">
-
-        <h3>Hot Wheels Lotus Cortina</h3>
-
-        <p>
-            <del>₹329</del><br>
-            <b style="color:red;">₹249</b>
-        </p>
-
+        <a href="hot-wheels-lotus-cortina.html" class="product-link">
+            <img src="hotwheels/Lotus Cortina.jpeg" alt="Hot Wheels Lotus Cortina">
+            <h3>Hot Wheels Lotus Cortina</h3>
+            <p>
+                <del>&#8377;329</del><br>
+                <b style="color:red;">&#8377;249</b>
+            </p>
+        </a>
         <a href="#" class="btn"
            onclick="orderCar('Hot Wheels Lotus Cortina')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- Hot Wheels 2024 Batman Batmobile -->
     <div class="card">
-        <img src="hotwheels/2024 Batman Batmobile.jpeg" alt="Hot Wheels 2024 Batman Batmobile">
-
-        <h3>Hot Wheels 2024 Batman Batmobile</h3>
-
-        <p>
-            <del>₹399</del><br>
-            <b style="color:red;">₹299</b>
-        </p>
-
+        <a href="hot-wheels-2024-batman-batmobile.html" class="product-link">
+            <img src="hotwheels/2024 Batman Batmobile.jpeg" alt="Hot Wheels 2024 Batman Batmobile">
+            <h3>Hot Wheels 2024 Batman Batmobile</h3>
+            <p>
+                <del>&#8377;399</del><br>
+                <b style="color:red;">&#8377;299</b>
+            </p>
+        </a>
         <a href="#" class="btn"
            onclick="orderCar('Hot Wheels 2024 Batman Batmobile')">
             Order on WhatsApp
         </a>
     </div>
-     <!-- Product 1 -->
+
     <div class="card">
-        <img src="hotwheels/donut.jpeg" alt="Hot Wheels Donut Drifter">
-
-        <h3>Hot Wheels Donut Drifter</h3>
-
-        <p>
-            <del>₹199</del><br>
-            <b style="color:red;">₹179</b>
-        </p>
-
+        <a href="hot-wheels-feline-lucky.html" class="product-link">
+            <img src="hotwheels/Feline Lucky.jpeg" alt="Hot Wheels Feline Lucky">
+            <h3>Hot Wheels Feline Lucky</h3>
+            <p>
+                <del>&#8377;368</del><br>
+                <b style="color:red;">&#8377;250</b>
+            </p>
+        </a>
         <a href="#" class="btn"
-           onclick="orderCar('Hot Wheels Donut Drifter')">
+           onclick="orderCar('Hot Wheels Feline Lucky')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- porschetaycan-->
     <div class="card">
-        <img src="hotwheels/porschetaycan.jpeg" alt="porschetaycan">
-
-        <h3>Hot Wheels Porsche Taycan Turbo S</h3>
-
-        <p>
-            <del>₹595</del><br>
-            <b style="color:red;">₹399</b>
-        </p>
-
+        <a href="hot-wheels-drift-ender.html" class="product-link">
+            <img src="hotwheels/Drift-Ender.jpeg" alt="Hot Wheels Drift-Ender">
+            <h3>Hot Wheels Drift-Ender</h3>
+            <p>
+                <del>&#8377;575</del><br>
+                <b style="color:red;">&#8377;299</b>
+            </p>
+        </a>
         <a href="#" class="btn"
-           onclick="orderCar('Hot Wheels Porsche Taycan Turbo S')">
+           onclick="orderCar('Hot Wheels Drift-Ender')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- Hot Wheels High-Tail Chaser -->
     <div class="card">
-        <img src="hotwheels/hightail.jpeg" alt="Hot Wheels High-Tail Chaser">
-
-        <h3>Hot Wheels High-Tail Chaser</h3>
-
-        <p>
-            <del>₹329</del><br>
-            <b style="color:red;">₹249</b>
-        </p>
-
+        <a href="hot-wheels-72-datsun-240z.html" class="product-link">
+            <img src="hotwheels/'72 Datsun 240Z.jpeg" alt="Hot Wheels &#x27;72 Datsun 240Z">
+            <h3>Hot Wheels '72 Datsun 240Z</h3>
+            <p>
+                <del>&#8377;449</del><br>
+                <b style="color:red;">&#8377;279</b>
+            </p>
+        </a>
         <a href="#" class="btn"
-           onclick="orderCar('Hot Wheels High-Tail Chaser')">
+           onclick="orderCar('Hot Wheels \'72 Datsun 240Z')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- The Dark Knight Batmobile -->
     <div class="card">
-        <img src="hotwheels/darkknight.jpeg" alt="Hot Wheels Premium Car">
-
-        <h3>The Dark Knight Batmobile</h3>
-
-        <p>
-            <del>₹603</del><br>
-            <b style="color:red;">₹369</b>
-        </p>
-
-        <a href="#" class="btn"
-           onclick="orderCar('The Dark Knight Batmobile')">
-            Order on WhatsApp
+        <a href="hot-wheels-pagani-zonda-cinque.html" class="product-link">
+            <img src="hotwheels/Pagani.jpeg" alt="Hot Wheels Pagani Zonda Cinque">
+            <h3>Hot Wheels Pagani Zonda Cinque</h3>
+            <p>
+                <del>&#8377;699</del><br>
+                <b style="color:red;">&#8377;319</b>
+            </p>
         </a>
-    </div>
-     <!-- Product 1 -->
-    <div class="card">
-        <img src="hotwheels/donut.jpeg" alt="Hot Wheels Donut Drifter">
-
-        <h3>Hot Wheels Donut Drifter</h3>
-
-        <p>
-            <del>₹199</del><br>
-            <b style="color:red;">₹179</b>
-        </p>
-
         <a href="#" class="btn"
-           onclick="orderCar('Hot Wheels Donut Drifter')">
+           onclick="orderCar('Hot Wheels Pagani Zonda Cinque')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- porschetaycan-->
     <div class="card">
-        <img src="hotwheels/porschetaycan.jpeg" alt="porschetaycan">
-
-        <h3>Hot Wheels Porsche Taycan Turbo S</h3>
-
-        <p>
-            <del>₹595</del><br>
-            <b style="color:red;">₹399</b>
-        </p>
-
+        <a href="hot-wheels-knight-rider-k-i-t-t-concept.html" class="product-link">
+            <img src="hotwheels/Concept.jpeg" alt="Hot Wheels Knight Rider K.I.T.T. Concept">
+            <h3>Hot Wheels Knight Rider K.I.T.T. Concept</h3>
+            <p>
+                <del>&#8377;650</del><br>
+                <b style="color:red;">&#8377;399</b>
+            </p>
+        </a>
         <a href="#" class="btn"
-           onclick="orderCar('Hot Wheels Porsche Taycan Turbo S')">
+           onclick="orderCar('Hot Wheels Knight Rider K.I.T.T. Concept')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- Hot Wheels High-Tail Chaser -->
     <div class="card">
-        <img src="hotwheels/hightail.jpeg" alt="Hot Wheels High-Tail Chaser">
-
-        <h3>Hot Wheels High-Tail Chaser</h3>
-
-        <p>
-            <del>₹329</del><br>
-            <b style="color:red;">₹249</b>
-        </p>
-
+        <a href="hot-wheels-solar-reflex.html" class="product-link">
+            <img src="hotwheels/Solar Reflex.jpeg" alt="Hot Wheels Solar Reflex">
+            <h3>Hot Wheels Solar Reflex</h3>
+            <p>
+                <del>&#8377;593</del><br>
+                <b style="color:red;">&#8377;249</b>
+            </p>
+        </a>
         <a href="#" class="btn"
-           onclick="orderCar('Hot Wheels High-Tail Chaser')">
+           onclick="orderCar('Hot Wheels Solar Reflex')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- The Dark Knight Batmobile -->
     <div class="card">
-        <img src="hotwheels/darkknight.jpeg" alt="Hot Wheels Premium Car">
-
-        <h3>The Dark Knight Batmobile</h3>
-
-        <p>
-            <del>₹603</del><br>
-            <b style="color:red;">₹369</b>
-        </p>
-
-        <a href="#" class="btn"
-           onclick="orderCar('The Dark Knight Batmobile')">
-            Order on WhatsApp
+        <a href="hot-wheels-70-chevy-chevette.html" class="product-link">
+            <img src="hotwheels/Chevy Chevette.jpeg" alt="Hot Wheels &#x27;70 Chevy Chevette">
+            <h3>Hot Wheels '70 Chevy Chevette</h3>
+            <p>
+                <del>&#8377;349</del><br>
+                <b style="color:red;">&#8377;299</b>
+            </p>
         </a>
-    </div>
-     <!-- Product 1 -->
-    <div class="card">
-        <img src="hotwheels/donut.jpeg" alt="Hot Wheels Donut Drifter">
-
-        <h3>Hot Wheels Donut Drifter</h3>
-
-        <p>
-            <del>₹199</del><br>
-            <b style="color:red;">₹179</b>
-        </p>
-
         <a href="#" class="btn"
-           onclick="orderCar('Hot Wheels Donut Drifter')">
+           onclick="orderCar('Hot Wheels \'70 Chevy Chevette')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- porschetaycan-->
     <div class="card">
-        <img src="hotwheels/porschetaycan.jpeg" alt="porschetaycan">
-
-        <h3>Hot Wheels Porsche Taycan Turbo S</h3>
-
-        <p>
-            <del>₹595</del><br>
-            <b style="color:red;">₹399</b>
-        </p>
-
+        <a href="hot-wheels-47-chevy-fleetline.html" class="product-link">
+            <img src="hotwheels/Chevy Fleetline.jpeg" alt="Hot Wheels &#x27;47 Chevy Fleetline">
+            <h3>Hot Wheels '47 Chevy Fleetline</h3>
+            <p>
+                <del>&#8377;350</del><br>
+                <b style="color:red;">&#8377;299</b>
+            </p>
+        </a>
         <a href="#" class="btn"
-           onclick="orderCar('Hot Wheels Porsche Taycan Turbo S')">
+           onclick="orderCar('Hot Wheels \'47 Chevy Fleetline')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- Hot Wheels High-Tail Chaser -->
     <div class="card">
-        <img src="hotwheels/hightail.jpeg" alt="Hot Wheels High-Tail Chaser">
-
-        <h3>Hot Wheels High-Tail Chaser</h3>
-
-        <p>
-            <del>₹329</del><br>
-            <b style="color:red;">₹249</b>
-        </p>
-
+        <a href="hot-wheels-monster-high-franchise.html" class="product-link">
+            <img src="hotwheels/Monster High franchise.jpeg" alt="Hot Wheels Monster High franchise">
+            <h3>Hot Wheels Monster High franchise</h3>
+            <p>
+                <del>&#8377;448</del><br>
+                <b style="color:red;">&#8377;349</b>
+            </p>
+        </a>
         <a href="#" class="btn"
-           onclick="orderCar('Hot Wheels High-Tail Chaser')">
+           onclick="orderCar('Hot Wheels Monster High franchise')">
             Order on WhatsApp
         </a>
     </div>
 
-    <!-- The Dark Knight Batmobile -->
     <div class="card">
-        <img src="hotwheels/darkknight.jpeg" alt="Hot Wheels Premium Car">
-
-        <h3>The Dark Knight Batmobile</h3>
-
-        <p>
-            <del>₹603</del><br>
-            <b style="color:red;">₹369</b>
-        </p>
-
+        <a href="hot-wheels-lucid-air.html" class="product-link">
+            <img src="hotwheels/Lucid Air.jpeg" alt="Hot Wheels Lucid Air">
+            <h3>Hot Wheels Lucid Air</h3>
+            <p>
+                <del>&#8377;474</del><br>
+                <b style="color:red;">&#8377;299</b>
+            </p>
+        </a>
         <a href="#" class="btn"
-           onclick="orderCar('The Dark Knight Batmobile')">
+           onclick="orderCar('Hot Wheels Lucid Air')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-electro-silhouette.html" class="product-link">
+            <img src="hotwheels/Electro Silhouette.jpeg" alt="Hot Wheels Electro Silhouette">
+            <h3>Hot Wheels Electro Silhouette</h3>
+            <p>
+                <del>&#8377;599</del><br>
+                <b style="color:red;">&#8377;359</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Electro Silhouette')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-volvo-240-drift-wagon.html" class="product-link">
+            <img src="hotwheels/Volvo 240 Drift Wagon.jpeg" alt="Hot Wheels Volvo 240 Drift Wagon">
+            <h3>Hot Wheels Volvo 240 Drift Wagon</h3>
+            <p>
+                <del>&#8377;414</del><br>
+                <b style="color:red;">&#8377;279</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Volvo 240 Drift Wagon')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-instant-boost.html" class="product-link">
+            <img src="hotwheels/Instant Boost.jpeg" alt="Hot Wheels Instant Boost">
+            <h3>Hot Wheels Instant Boost</h3>
+            <p>
+                <del>&#8377;582</del><br>
+                <b style="color:red;">&#8377;199</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Instant Boost')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-quick-chat.html" class="product-link">
+            <img src="hotwheels/Quick Chat.jpeg" alt="Hot Wheels Quick Chat">
+            <h3>Hot Wheels Quick Chat</h3>
+            <p>
+                <del>&#8377;265</del><br>
+                <b style="color:red;">&#8377;200</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Quick Chat')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-raijin-express.html" class="product-link">
+            <img src="hotwheels/Raijin Express.jpeg" alt="Hot Wheels Raijin Express">
+            <h3>Hot Wheels Raijin Express</h3>
+            <p>
+                <del>&#8377;499</del><br>
+                <b style="color:red;">&#8377;250</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Raijin Express')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-67-camaro.html" class="product-link">
+            <img src="hotwheels/67 Camaro.jpeg" alt="Hot Wheels &#x27;67 Camaro">
+            <h3>Hot Wheels '67 Camaro</h3>
+            <p>
+                <del>&#8377;732</del><br>
+                <b style="color:red;">&#8377;339</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels \'67 Camaro')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-purple-passion.html" class="product-link">
+            <img src="hotwheels/Purple Passion.jpeg" alt="Hot Wheels Purple Passion">
+            <h3>Hot Wheels Purple Passion</h3>
+            <p>
+                <del>&#8377;499</del><br>
+                <b style="color:red;">&#8377;259</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Purple Passion')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-decidedly-go.html" class="product-link">
+            <img src="hotwheels/Decidedly Go.jpeg" alt="Hot Wheels Decidedly Go">
+            <h3>Hot Wheels Decidedly Go</h3>
+            <p>
+                <del>&#8377;250</del><br>
+                <b style="color:red;">&#8377;199</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Decidedly Go')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-x-steam.html" class="product-link">
+            <img src="hotwheels/X-Steam.jpeg" alt="Hot Wheels X-Steam">
+            <h3>Hot Wheels X-Steam</h3>
+            <p>
+                <del>&#8377;249</del><br>
+                <b style="color:red;">&#8377;210</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels X-Steam')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-dessert-drifter.html" class="product-link">
+            <img src="hotwheels/Dessert Drifter.jpeg" alt="Hot Wheels Dessert Drifter">
+            <h3>Hot Wheels Dessert Drifter</h3>
+            <p>
+                <del>&#8377;345</del><br>
+                <b style="color:red;">&#8377;199</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Dessert Drifter')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-wattzup.html" class="product-link">
+            <img src="hotwheels/Wattzup .jpeg" alt="Hot Wheels Wattzup">
+            <h3>Hot Wheels Wattzup</h3>
+            <p>
+                <del>&#8377;229</del><br>
+                <b style="color:red;">&#8377;210</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Wattzup')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-pass-n-go.html" class="product-link">
+            <img src="hotwheels/Pass N Go.jpeg" alt="Hot Wheels “Pass &#x27;N Go”">
+            <h3>Hot Wheels “Pass 'N Go”</h3>
+            <p>
+                <del>&#8377;516</del><br>
+                <b style="color:red;">&#8377;249</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels “Pass \'N Go”')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-twin-mill-braille-racer.html" class="product-link">
+            <img src="hotwheels/Twin Mill Braille Racer.jpeg" alt="Hot Wheels Twin Mill &quot;Braille Racer&quot;">
+            <h3>Hot Wheels Twin Mill "Braille Racer"</h3>
+            <p>
+                <del>&#8377;299</del><br>
+                <b style="color:red;">&#8377;249</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Twin Mill &quot;Braille Racer&quot;')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-5-alarm.html" class="product-link">
+            <img src="hotwheels/5 Alarm .jpeg" alt="Hot Wheels 5 Alarm">
+            <h3>Hot Wheels 5 Alarm</h3>
+            <p>
+                <del>&#8377;250</del><br>
+                <b style="color:red;">&#8377;210</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels 5 Alarm')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-roller-toaster.html" class="product-link">
+            <img src="hotwheels/Roller Toaster.jpeg" alt="Hot Wheels Roller Toaster">
+            <h3>Hot Wheels Roller Toaster</h3>
+            <p>
+                <del>&#8377;349</del><br>
+                <b style="color:red;">&#8377;199</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Roller Toaster')">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hot-wheels-haulerback.html" class="product-link">
+            <img src="hotwheels/Haulerback .jpeg" alt="Hot Wheels Haulerback">
+            <h3>Hot Wheels Haulerback</h3>
+            <p>
+                <del>&#8377;250</del><br>
+                <b style="color:red;">&#8377;199</b>
+            </p>
+        </a>
+        <a href="#" class="btn"
+           onclick="orderCar('Hot Wheels Haulerback')">
             Order on WhatsApp
         </a>
     </div>
