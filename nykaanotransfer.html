@@ -65,13 +65,44 @@ font-size:30px;
 font-weight:bold;
 }
 
-select{
-width:100%;
-max-width:320px;
-padding:12px;
-font-size:16px;
+.shade-grid{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
 margin-top:10px;
-border-radius:6px;
+max-width:420px;
+}
+
+.shade-item{
+width:70px;
+text-align:center;
+cursor:pointer;
+}
+
+.shade-item img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid transparent;
+display:block;
+margin:0 auto 6px;
+transition:border-color .15s, transform .15s;
+}
+
+.shade-item:hover img{
+transform:scale(1.05);
+}
+
+.shade-item.active img{
+border-color:#e91e63;
+}
+
+.shade-item span{
+font-size:11px;
+line-height:1.2;
+display:block;
+color:#333;
 }
 
 .btn{
@@ -107,8 +138,9 @@ p{
 text-align:center;
 }
 
-select{
+.shade-grid{
 max-width:100%;
+justify-content:center;
 }
 
 .btn{
@@ -147,20 +179,59 @@ Selected Shade :
 
 <br>
 
-<select id="shade">
+<div class="shade-grid" id="shadeGrid">
 
-<option>Mum Taj</option>
-<option>Chai</option>
-<option>Maharani</option>
-<option>Boho</option>
-<option>Bombae</option>
-<option>Kashi</option>
-<option>Madras Kaapi</option>
-<option>Maithili</option>
-<option>Jhumki</option>
-<option>Mishti</option>
+<div class="shade-item active" data-shade="Mum Taj">
+<img src="nykaalipstick1/Mum Taj.jpeg" alt="Mum Taj">
+<span>Mum Taj</span>
+</div>
 
-</select>
+<div class="shade-item" data-shade="Chai">
+<img src="nykaalipstick1/Chai.jpeg" alt="Chai">
+<span>Chai</span>
+</div>
+
+<div class="shade-item" data-shade="Maharani">
+<img src="nykaalipstick1/Maharani.jpeg" alt="Maharani">
+<span>Maharani</span>
+</div>
+
+<div class="shade-item" data-shade="Boho">
+<img src="nykaalipstick1/Boho.jpeg" alt="Boho">
+<span>Boho</span>
+</div>
+
+<div class="shade-item" data-shade="Bombae">
+<img src="nykaalipstick1/Bombae.jpeg" alt="Bombae">
+<span>Bombae</span>
+</div>
+
+<div class="shade-item" data-shade="Kashi">
+<img src="nykaalipstick1/Kashi.jpeg" alt="Kashi">
+<span>Kashi</span>
+</div>
+
+<div class="shade-item" data-shade="Madras Kaapi">
+<img src="nykaalipstick1/Madras Kaapi.jpeg" alt="Madras Kaapi">
+<span>Madras Kaapi</span>
+</div>
+
+<div class="shade-item" data-shade="Maithili">
+<img src="nykaalipstick1/Maithili.jpeg" alt="Maithili">
+<span>Maithili</span>
+</div>
+
+<div class="shade-item" data-shade="Jhumki">
+<img src="nykaalipstick1/Jhumki.jpeg" alt="Jhumki">
+<span>Jhumki</span>
+</div>
+
+<div class="shade-item" data-shade="Mishti">
+<img src="nykaalipstick1/Mishti.jpeg" alt="Mishti">
+<span>Mishti</span>
+</div>
+
+</div>
 
 <br>
 
@@ -172,7 +243,7 @@ Order on WhatsApp
 
 </div>
 <script>
-const shade=document.getElementById("shade");
+const shadeItems=document.querySelectorAll(".shade-item");
 const img=document.getElementById("productImage");
 const nameEl=document.getElementById("shadeName");
 const btn=document.getElementById("orderBtn");
@@ -192,12 +263,14 @@ const shadeImages={
 
 };
 
-function update(){
-
-const s=shade.value;
+function update(s){
 
 img.src=shadeImages[s];
 nameEl.textContent=s;
+
+shadeItems.forEach(function(item){
+item.classList.toggle("active", item.dataset.shade===s);
+});
 
 btn.innerHTML="Order on WhatsApp";
 btn.style.background="#25D366";
@@ -209,9 +282,13 @@ btn.href="https://wa.me/919526112374?text="+encodeURIComponent(
 
 }
 
-shade.addEventListener("change",update);
+shadeItems.forEach(function(item){
+item.addEventListener("click",function(){
+update(item.dataset.shade);
+});
+});
 
-update();
+update("Mum Taj");
 
 </script>
 
