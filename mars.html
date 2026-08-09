@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,13 +65,44 @@ font-size:30px;
 font-weight:bold;
 }
 
-select{
-width:100%;
-max-width:320px;
-padding:12px;
-font-size:16px;
+.shade-grid{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
 margin-top:10px;
-border-radius:6px;
+max-width:420px;
+}
+
+.shade-item{
+width:70px;
+text-align:center;
+cursor:pointer;
+}
+
+.shade-item img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid transparent;
+display:block;
+margin:0 auto 6px;
+transition:border-color .15s, transform .15s;
+}
+
+.shade-item:hover img{
+transform:scale(1.05);
+}
+
+.shade-item.active img{
+border-color:#e91e63;
+}
+
+.shade-item span{
+font-size:11px;
+line-height:1.2;
+display:block;
+color:#333;
 }
 
 .btn{
@@ -108,8 +138,9 @@ p{
 text-align:center;
 }
 
-select{
+.shade-grid{
 max-width:100%;
+justify-content:center;
 }
 
 .btn{
@@ -147,15 +178,34 @@ Selected Shade:
 
 <br>
 
-<select id="shade">
+<div class="shade-grid" id="shadeGrid">
 
-<option>Bollywood Surprise</option>
-<option>Disco Deewane</option>
-<option>Zesty Zumba</option>
-<option>Aerial Awe</option>
-<option>Khoobsurat Kuchipudi</option>
+<div class="shade-item active" data-shade="Bollywood Surprise">
+<img src="marslipstick/Bollywood Surprise.jpeg" alt="Bollywood Surprise">
+<span>Bollywood Surprise</span>
+</div>
 
-</select>
+<div class="shade-item" data-shade="Disco Deewane">
+<img src="marslipstick/Disco Deewane.jpeg" alt="Disco Deewane">
+<span>Disco Deewane</span>
+</div>
+
+<div class="shade-item" data-shade="Zesty Zumba">
+<img src="marslipstick/Zesty Zumba.jpeg" alt="Zesty Zumba">
+<span>Zesty Zumba</span>
+</div>
+
+<div class="shade-item" data-shade="Aerial Awe">
+<img src="marslipstick/Aerial Awe.jpeg" alt="Aerial Awe">
+<span>Aerial Awe</span>
+</div>
+
+<div class="shade-item" data-shade="Khoobsurat Kuchipudi">
+<img src="marslipstick/Khoobsurat Kuchipudi.jpeg" alt="Khoobsurat Kuchipudi">
+<span>Khoobsurat Kuchipudi</span>
+</div>
+
+</div>
 <br>
 <a id="orderBtn" class="btn" href="#">
 Order on WhatsApp
@@ -165,7 +215,7 @@ Order on WhatsApp
 
 </div>
 <script>
-const shade = document.getElementById("shade");
+const shadeItems = document.querySelectorAll(".shade-item");
 const img = document.getElementById("productImage");
 const nameEl = document.getElementById("shadeName");
 const btn = document.getElementById("orderBtn");
@@ -179,13 +229,15 @@ const shadeImages = {
     "Khoobsurat Kuchipudi":"marslipstick/Khoobsurat Kuchipudi.jpeg",
 };
 
-function update(){
+function update(s){
 
-    const s = shade.value;
-    
     img.src=shadeImages[s];
     nameEl.textContent=s;
 
+
+shadeItems.forEach(function(item){
+item.classList.toggle("active", item.dataset.shade===s);
+});
     btn.innerHTML="Order on WhatsApp";
     btn.style.background="#25D366";
     btn.style.pointerEvents="auto";
@@ -195,9 +247,13 @@ function update(){
     );
 }
 
-shade.addEventListener("change",update);
+shadeItems.forEach(function(item){
+item.addEventListener("click",function(){
+update(item.dataset.shade);
+});
+});
 
-update();
+update("Bollywood Surprise");
 
 </script>
 
