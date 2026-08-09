@@ -65,13 +65,44 @@ font-size:30px;
 font-weight:bold;
 }
 
-select{
-width:100%;
-max-width:320px;
-padding:12px;
-font-size:16px;
+.shade-grid{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
 margin-top:10px;
-border-radius:6px;
+max-width:420px;
+}
+
+.shade-item{
+width:70px;
+text-align:center;
+cursor:pointer;
+}
+
+.shade-item img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid transparent;
+display:block;
+margin:0 auto 6px;
+transition:border-color .15s, transform .15s;
+}
+
+.shade-item:hover img{
+transform:scale(1.05);
+}
+
+.shade-item.active img{
+border-color:#e91e63;
+}
+
+.shade-item span{
+font-size:11px;
+line-height:1.2;
+display:block;
+color:#333;
 }
 
 .btn{
@@ -107,8 +138,9 @@ p{
 text-align:center;
 }
 
-select{
+.shade-grid{
 max-width:100%;
+justify-content:center;
 }
 
 .btn{
@@ -146,16 +178,39 @@ Selected Shade:
 
 <br>
 
-<select id="shade">
+<div class="shade-grid" id="shadeGrid">
 
-<option>Shade-02</option>
-<option>Shade-05</option>
-<option>Shade-03</option>
-<option>Shade-06</option>
-<option>Shade-01</option>
-<option>Shade-07</option>
+<div class="shade-item active" data-shade="Shade-02">
+<img src="marsfoundation/Shade-02.jpeg" alt="Shade-02">
+<span>Shade-02</span>
+</div>
 
-</select>
+<div class="shade-item" data-shade="Shade-05">
+<img src="marsfoundation/Shade-05.jpeg" alt="Shade-05">
+<span>Shade-05</span>
+</div>
+
+<div class="shade-item" data-shade="Shade-03">
+<img src="marsfoundation/Shade-03.jpeg" alt="Shade-03">
+<span>Shade-03</span>
+</div>
+
+<div class="shade-item" data-shade="Shade-06">
+<img src="marsfoundation/Shade-06.jpeg" alt="Shade-06">
+<span>Shade-06</span>
+</div>
+
+<div class="shade-item" data-shade="Shade-01">
+<img src="marsfoundation/Shade-01.jpeg" alt="Shade-01">
+<span>Shade-01</span>
+</div>
+
+<div class="shade-item" data-shade="Shade-07">
+<img src="marsfoundation/Shade-07.jpeg" alt="Shade-07">
+<span>Shade-07</span>
+</div>
+
+</div>
 <br>
 <a id="orderBtn" class="btn" href="#">
 Order on WhatsApp
@@ -165,7 +220,7 @@ Order on WhatsApp
 
 </div>
 <script>
-const shade = document.getElementById("shade");
+const shadeItems = document.querySelectorAll(".shade-item");
 const img = document.getElementById("productImage");
 const nameEl = document.getElementById("shadeName");
 const btn = document.getElementById("orderBtn");
@@ -180,13 +235,15 @@ const shadeImages = {
     "Shade-07":"marsfoundation/Shade-07.jpeg",
 };
 
-function update(){
+function update(s){
 
-    const s = shade.value;
-    
     img.src=shadeImages[s];
     nameEl.textContent=s;
 
+
+shadeItems.forEach(function(item){
+item.classList.toggle("active", item.dataset.shade===s);
+});
     btn.innerHTML="Order on WhatsApp";
     btn.style.background="#25D366";
     btn.style.pointerEvents="auto";
@@ -196,9 +253,13 @@ function update(){
     );
 }
 
-shade.addEventListener("change",update);
+shadeItems.forEach(function(item){
+item.addEventListener("click",function(){
+update(item.dataset.shade);
+});
+});
 
-update();
+update("Shade-02");
 
 </script>
 
