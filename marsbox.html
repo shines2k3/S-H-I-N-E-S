@@ -65,13 +65,44 @@ font-size:30px;
 font-weight:bold;
 }
 
-select{
-width:100%;
-max-width:320px;
-padding:12px;
-font-size:16px;
+.shade-grid{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
 margin-top:10px;
-border-radius:6px;
+max-width:420px;
+}
+
+.shade-item{
+width:70px;
+text-align:center;
+cursor:pointer;
+}
+
+.shade-item img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid transparent;
+display:block;
+margin:0 auto 6px;
+transition:border-color .15s, transform .15s;
+}
+
+.shade-item:hover img{
+transform:scale(1.05);
+}
+
+.shade-item.active img{
+border-color:#e91e63;
+}
+
+.shade-item span{
+font-size:11px;
+line-height:1.2;
+display:block;
+color:#333;
 }
 
 .btn{
@@ -107,8 +138,9 @@ p{
 text-align:center;
 }
 
-select{
+.shade-grid{
 max-width:100%;
+justify-content:center;
 }
 
 .btn{
@@ -146,15 +178,34 @@ Selected Shade:
 
 <br>
 
-<select id="shade">
+<div class="shade-grid" id="shadeGrid">
 
-<option>01-Red & Maroon</option>
-<option>02-Peaches & Nudes</option>
-<option>3x 04-Brown</option>
-<option>03-plum</option>
-<option>06 All Rounder</option>
+<div class="shade-item active" data-shade="01-Red & Maroon">
+<img src="marslipstick/01-Red & Maroon.jpeg" alt="01-Red & Maroon">
+<span>01-Red & Maroon</span>
+</div>
 
-</select>
+<div class="shade-item" data-shade="02-Peaches & Nudes">
+<img src="marslipstick/02-Peaches & Nudes.jpeg" alt="02-Peaches & Nudes">
+<span>02-Peaches & Nudes</span>
+</div>
+
+<div class="shade-item" data-shade="3x 04-Brown">
+<img src="marslipstick/3x 04-Brown.jpeg" alt="3x 04-Brown">
+<span>3x 04-Brown</span>
+</div>
+
+<div class="shade-item" data-shade="03-plum">
+<img src="marslipstick/03-plum.jpeg" alt="03-plum">
+<span>03-plum</span>
+</div>
+
+<div class="shade-item" data-shade="06 All Rounder">
+<img src="marslipstick/06 All Rounder.jpeg" alt="06 All Rounder">
+<span>06 All Rounder</span>
+</div>
+
+</div>
 <br>
 <a id="orderBtn" class="btn" href="#">
 Order on WhatsApp
@@ -164,7 +215,7 @@ Order on WhatsApp
 
 </div>
 <script>
-const shade = document.getElementById("shade");
+const shadeItems = document.querySelectorAll(".shade-item");
 const img = document.getElementById("productImage");
 const nameEl = document.getElementById("shadeName");
 const btn = document.getElementById("orderBtn");
@@ -178,13 +229,15 @@ const shadeImages = {
     "06 All Rounder":"marslipstick/06 All Rounder.jpeg",
 };
 
-function update(){
+function update(s){
 
-    const s = shade.value;
-    
     img.src=shadeImages[s];
     nameEl.textContent=s;
 
+
+shadeItems.forEach(function(item){
+item.classList.toggle("active", item.dataset.shade===s);
+});
     btn.innerHTML="Order on WhatsApp";
     btn.style.background="#25D366";
     btn.style.pointerEvents="auto";
@@ -194,9 +247,13 @@ function update(){
     );
 }
 
-shade.addEventListener("change",update);
+shadeItems.forEach(function(item){
+item.addEventListener("click",function(){
+update(item.dataset.shade);
+});
+});
 
-update();
+update("01-Red & Maroon");
 
 </script>
 
