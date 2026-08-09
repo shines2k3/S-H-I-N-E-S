@@ -65,13 +65,44 @@ font-size:30px;
 font-weight:bold;
 }
 
-select{
-width:100%;
-max-width:320px;
-padding:12px;
-font-size:16px;
+.shade-grid{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
 margin-top:10px;
-border-radius:6px;
+max-width:420px;
+}
+
+.shade-item{
+width:70px;
+text-align:center;
+cursor:pointer;
+}
+
+.shade-item img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid transparent;
+display:block;
+margin:0 auto 6px;
+transition:border-color .15s, transform .15s;
+}
+
+.shade-item:hover img{
+transform:scale(1.05);
+}
+
+.shade-item.active img{
+border-color:#e91e63;
+}
+
+.shade-item span{
+font-size:11px;
+line-height:1.2;
+display:block;
+color:#333;
 }
 
 .btn{
@@ -107,8 +138,9 @@ p{
 text-align:center;
 }
 
-select{
+.shade-grid{
 max-width:100%;
+justify-content:center;
 }
 
 .btn{
@@ -147,43 +179,174 @@ Selected Shade :
 
 <br>
 
-<select id="shade">
+<div class="shade-grid" id="shadeGrid">
 
-<option>On Fire</option>
-<option>Pretty In Pink</option>
-<option>Sittin Pretty</option>
-<option>Red Moment</option>
-<option>Lowkey Flex</option>
-<option>Wine Grind</option>
-<option>Walk the Walk</option>
-<option>Break a Leg</option>
-<option>Deja Nude</option>
-<option>Wakeup Makeup</option>
-<option>It's a Date</option>
-<option>Bon Appetit Baby</option>
-<option>PHAT</option>
-<option>Plum Luck</option>
-<option>Hits Different</option>
-<option>Brownie Points</option>
-<option>Slaycation</option>
-<option>Vibing Solo</option>
-<option>Bounce Back</option>
-<option>For The Gram</option>
-<option>It's A Vibe</option>
-<option>Rumor Has It</option>
-<option>Like a Boss</option>
-<option>Nailed It</option>
-<option>Pep Talk</option>
-<option>You're Latte</option>
-<option>Day Dreaming</option>
-<option>Gossip Dose</option>
-<option>Let it Snooze</option>
-<option>Game On</option>
-<option>Dressed to Kill</option>
-<option>Traffic Jammin</option>
-<option>TGIF</option>
+<div class="shade-item active" data-shade="On Fire">
+<img src="nykaalipstick/On Fire.jpeg" alt="On Fire">
+<span>On Fire</span>
+</div>
 
-</select>
+<div class="shade-item" data-shade="Pretty In Pink">
+<img src="nykaalipstick/Pretty In Pink.jpeg" alt="Pretty In Pink">
+<span>Pretty In Pink</span>
+</div>
+
+<div class="shade-item" data-shade="Sittin Pretty">
+<img src="nykaalipstick/Sittin Pretty.jpeg" alt="Sittin Pretty">
+<span>Sittin Pretty</span>
+</div>
+
+<div class="shade-item" data-shade="Red Moment">
+<img src="nykaalipstick/Red Moment.jpeg" alt="Red Moment">
+<span>Red Moment</span>
+</div>
+
+<div class="shade-item" data-shade="Lowkey Flex">
+<img src="nykaalipstick/Lowkey Flex.jpeg" alt="Lowkey Flex">
+<span>Lowkey Flex</span>
+</div>
+
+<div class="shade-item" data-shade="Wine Grind">
+<img src="nykaalipstick/Wine Grind.jpeg" alt="Wine Grind">
+<span>Wine Grind</span>
+</div>
+
+<div class="shade-item" data-shade="Walk the Walk">
+<img src="nykaalipstick/Walk the Walk.jpeg" alt="Walk the Walk">
+<span>Walk the Walk</span>
+</div>
+
+<div class="shade-item" data-shade="Break a Leg">
+<img src="nykaalipstick/Break a Leg.jpeg" alt="Break a Leg">
+<span>Break a Leg</span>
+</div>
+
+<div class="shade-item" data-shade="Deja Nude">
+<img src="nykaalipstick/Deja Nude.jpeg" alt="Deja Nude">
+<span>Deja Nude</span>
+</div>
+
+<div class="shade-item" data-shade="Wakeup Makeup">
+<img src="nykaalipstick/Wakeup Makeup.jpeg" alt="Wakeup Makeup">
+<span>Wakeup Makeup</span>
+</div>
+
+<div class="shade-item" data-shade="It's a Date">
+<img src="nykaalipstick/It's a Date.jpeg" alt="It's a Date">
+<span>It's a Date</span>
+</div>
+
+<div class="shade-item" data-shade="Bon Appetit Baby">
+<img src="nykaalipstick/Bon Appetit Baby.jpg" alt="Bon Appetit Baby">
+<span>Bon Appetit Baby</span>
+</div>
+
+<div class="shade-item" data-shade="PHAT">
+<img src="nykaalipstick/PHAT.jpeg" alt="PHAT">
+<span>PHAT</span>
+</div>
+
+<div class="shade-item" data-shade="Plum Luck">
+<img src="nykaalipstick/Plum Luck.jpeg" alt="Plum Luck">
+<span>Plum Luck</span>
+</div>
+
+<div class="shade-item" data-shade="Hits Different">
+<img src="nykaalipstick/Hits Different.jpeg" alt="Hits Different">
+<span>Hits Different</span>
+</div>
+
+<div class="shade-item" data-shade="Brownie Points">
+<img src="nykaalipstick/Brownie Points.jpeg" alt="Brownie Points">
+<span>Brownie Points</span>
+</div>
+
+<div class="shade-item" data-shade="Slaycation">
+<img src="nykaalipstick/Slaycation.jpeg" alt="Slaycation">
+<span>Slaycation</span>
+</div>
+
+<div class="shade-item" data-shade="Vibing Solo">
+<img src="nykaalipstick/Vibing Solo.jpeg" alt="Vibing Solo">
+<span>Vibing Solo</span>
+</div>
+
+<div class="shade-item" data-shade="Bounce Back">
+<img src="nykaalipstick/Bounce Back.jpeg" alt="Bounce Back">
+<span>Bounce Back</span>
+</div>
+
+<div class="shade-item" data-shade="For The Gram">
+<img src="nykaalipstick/For The Gram.jpeg" alt="For The Gram">
+<span>For The Gram</span>
+</div>
+
+<div class="shade-item" data-shade="It's A Vibe">
+<img src="nykaalipstick/It's A Vibe.jpeg" alt="It's A Vibe">
+<span>It's A Vibe</span>
+</div>
+
+<div class="shade-item" data-shade="Rumor Has It">
+<img src="nykaalipstick/Rumor Has It.jpeg" alt="Rumor Has It">
+<span>Rumor Has It</span>
+</div>
+
+<div class="shade-item" data-shade="Like a Boss">
+<img src="nykaalipstick/Like a Boss.jpeg" alt="Like a Boss">
+<span>Like a Boss</span>
+</div>
+
+<div class="shade-item" data-shade="Nailed It">
+<img src="nykaalipstick/Nailed It.jpeg" alt="Nailed It">
+<span>Nailed It</span>
+</div>
+
+<div class="shade-item" data-shade="Pep Talk">
+<img src="nykaalipstick/Pep Talk.jpeg" alt="Pep Talk">
+<span>Pep Talk</span>
+</div>
+
+<div class="shade-item" data-shade="You're Latte">
+<img src="nykaalipstick/You're Latte.jpeg" alt="You're Latte">
+<span>You're Latte</span>
+</div>
+
+<div class="shade-item" data-shade="Day Dreaming">
+<img src="nykaalipstick/Day Dreaming.jpeg" alt="Day Dreaming">
+<span>Day Dreaming</span>
+</div>
+
+<div class="shade-item" data-shade="Gossip Dose">
+<img src="nykaalipstick/Gossip Dose.jpeg" alt="Gossip Dose">
+<span>Gossip Dose</span>
+</div>
+
+<div class="shade-item" data-shade="Let it Snooze">
+<img src="nykaalipstick/Let it Snooze.jpeg" alt="Let it Snooze">
+<span>Let it Snooze</span>
+</div>
+
+<div class="shade-item" data-shade="Game On">
+<img src="nykaalipstick/Game On.jpeg" alt="Game On">
+<span>Game On</span>
+</div>
+
+<div class="shade-item" data-shade="Dressed to Kill">
+<img src="nykaalipstick/Dressed to Kill.jpeg" alt="Dressed to Kill">
+<span>Dressed to Kill</span>
+</div>
+
+<div class="shade-item" data-shade="Traffic Jammin">
+<img src="nykaalipstick/Traffic Jammin.jpeg" alt="Traffic Jammin">
+<span>Traffic Jammin</span>
+</div>
+
+<div class="shade-item" data-shade="TGIF">
+<img src="nykaalipstick/TGIF.jpeg" alt="TGIF">
+<span>TGIF</span>
+</div>
+
+</div>
 
 <br>
 
@@ -195,7 +358,7 @@ Order on WhatsApp
 
 </div>
 <script>
-const shade=document.getElementById("shade");
+const shadeItems=document.querySelectorAll(".shade-item");
 const img=document.getElementById("productImage");
 const nameEl=document.getElementById("shadeName");
 const btn=document.getElementById("orderBtn");
@@ -238,12 +401,14 @@ const shadeImages={
 
 };
 
-function update(){
-
-const s=shade.value;
+function update(s){
 
 img.src=shadeImages[s];
 nameEl.textContent=s;
+
+shadeItems.forEach(function(item){
+item.classList.toggle("active", item.dataset.shade===s);
+});
 
 btn.innerHTML="Order on WhatsApp";
 btn.style.background="#25D366";
@@ -255,9 +420,13 @@ btn.href="https://wa.me/919526112374?text="+encodeURIComponent(
 
 }
 
-shade.addEventListener("change",update);
+shadeItems.forEach(function(item){
+item.addEventListener("click",function(){
+update(item.dataset.shade);
+});
+});
 
-update();
+update("On Fire");
 
 </script>
 
