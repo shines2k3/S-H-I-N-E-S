@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FACESCANDADA Comfy Matte Wow Liquid Lipstick</title>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.product {
+    max-width: 1100px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+.details {
+    flex: 1;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.price {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.price del {
+    color: #888;
+    margin-right: 10px;
+}
+
+.price span {
+    color: #e91e63;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.selected-shade {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.shade-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    max-width: 500px;
+}
+
+.shade-item {
+    width: 75px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.shade-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid transparent;
+    display: block;
+    margin: 0 auto 6px;
+    transition: border-color 0.15s, transform 0.15s;
+}
+
+.shade-item:hover img {
+    transform: scale(1.08);
+}
+
+.shade-item.active img {
+    border-color: #e91e63;
+}
+
+.shade-item span {
+    font-size: 11px;
+    line-height: 1.2;
+    display: block;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.btn.sold-out {
+    background: gray;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .product {
+        flex-direction: column;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .product-image {
+        max-width: 280px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .price,
+    .selected-shade {
+        text-align: center;
+    }
+
+    .shade-grid {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="product">
+
+    <!-- Main Product Image -->
+    <div>
+        <img
+            id="productImage"
+            class="product-image"
+            src="facescanadaliquidlipstick/Choco Couture 01.png"
+            alt="Comfy Matte Wow Liquid Lipstick"
+        >
+    </div>
+
+    <!-- Product Details -->
+    <div class="details">
+
+        <h1>
+           Comfy Matte Wow Liquid Lipstick
+        </h1>
+
+        <p class="price">
+            <del>&#8377;299</del>
+            <span>&#8377;289</span>
+        </p>
+
+        <p class="selected-shade">
+            Selected Shade:
+            <b id="shadeName">Choco Couture 01</b>
+        </p>
+
+        <br>
+
+        <!-- Shade Selection -->
+        <div class="shade-grid" id="shadeGrid">
+
+            <div
+                class="shade-item active"
+                data-shade="Choco Couture 01"
+                data-image="facescanadaliquidlipstick/Choco Couture 01.png"
+            >
+                <img
+                    src="facescanadaliquidlipstick/Choco Couture 01.png"
+                    alt="Choco Couture 01"
+                >
+                <span>Choco Couture 01</span>
+            </div>
+
+            <div
+                class="shade-item"
+                data-shade="Mauve Majesty 02"
+                data-image="facescanadaliquidlipstick/Mauve Majesty 02.png"
+            >
+                <img
+                    src="facescanadaliquidlipstick/Mauve Majesty 02.png"
+                    alt="Mauve Majesty 02"
+                >
+                <span>Mauve Majesty 02</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Ruby Rouge 03"
+                data-image="facescanadaliquidlipstick/Ruby Rouge 03.png"
+            >
+                <img
+                    src="facescanadaliquidlipstick/Ruby Rouge 03.png"
+                    alt="Ruby Rouge 03"
+                >
+                <span>Ruby Rouge 03</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Plum Passion 04"
+                data-image="facescanadaliquidlipstick/Plum Passion 04.png"
+            >
+                <img
+                    src="facescanadaliquidlipstick/Plum Passion 04.png"
+                    alt="Plum Passion 04"
+                >
+                <span>Plum Passion 04</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Maroon Maven 05"
+                data-image="facescanadaliquidlipstick/Maroon Maven 05.png"
+            >
+                <img
+                    src="facescanadaliquidlipstick/Maroon Maven 05.png"
+                    alt="Maroon Maven 05"
+                >
+                <span>Maroon Maven 05</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Fuschia Fun 06"
+                data-image="facescanadaliquidlipstick/Fuschia Fun 06.png"
+            >
+                <img
+                    src="facescanadaliquidlipstick/Fuschia Fun 06.png"
+                    alt="Fuschia Fun 06"
+                >
+                <span>Fuschia Fun 06</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Cocoa Crush 07"
+                data-image="facescanadaliquidlipstick/Cocoa Crush 07.png"
+            >
+                <img
+                    src="facescanadaliquidlipstick/Cocoa Crush 07.png"
+                    alt="Cocoa Crush 07"
+                >
+                <span>Cocoa Crush 07</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Nude Nectar 08"
+                data-image="facescanadaliquidlipstick/Nude Nectar 08.png"
+            >
+                <img
+                    src="facescanadaliquidlipstick/Nude Nectar 08.png"
+                    alt="Nude Nectar 08"
+                >
+                <span>Nude Nectar 08</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Pink Petal 09"
+                data-image="facescanadaliquidlipstick/Pink Petal 09.png"
+            >
+                <img
+                    src="facescanadaliquidlipstick/Pink Petal 09.png"
+                    alt="Pink Petal 09"
+                >
+                <span>Pink Petal 09</span>
+            </div>
+              <div
+                class="shade-item"
+                data-shade="Orchid Opulence 10"
+                data-image="facescanadaliquidlipstick/Orchid Opulence 10.png"
+            >
+                <img
+                    src="facescanadaliquidlipstick/Orchid Opulence 10.png"
+                    alt="Orchid Opulence 10"
+                >
+                <span>Orchid Opulence 10</span>
+            </div>
+            
+        </div>
+
+        <a href="#" class="btn">Order on WhatsApp</a>
+
+    </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.shade-item').forEach(function (item) {
+    item.addEventListener('click', function () {
+        document.querySelectorAll('.shade-item').forEach(function (i) {
+            i.classList.remove('active');
+        });
+        item.classList.add('active');
+        document.getElementById('productImage').src = item.getAttribute('data-image');
+        document.getElementById('shadeName').textContent = item.getAttribute('data-shade');
+    });
+});
+</script>
+
+</body>
+</html>
