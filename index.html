@@ -7,6 +7,35 @@
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+.card.coming-soon {
+    position: relative;
+    overflow: hidden;
+}
+.card.coming-soon img,
+.card.coming-soon h3 {
+    filter: blur(4px);
+    pointer-events: none;
+    user-select: none;
+}
+.card.coming-soon::after {
+    content: "Coming Soon";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+</style>
 </head>
 <body>
 
@@ -45,25 +74,25 @@
     <h3>Cosmetics</h3>
 </div>
 </a>
-        <div class="card">
+        <div class="card coming-soon">
             <img src="image/fancy.jpg" alt="">
             <h3>Fancy Items</h3>
         </div>
 
-        <div class="card">
+        <div class="card coming-soon">
 <img src="image/skincare.jpeg" alt="Skincare">
             <h3>Skincare and Haircare</h3>
         </div>
         
-        <div class="card">
+        <div class="card coming-soon">
             <img src="image/perfume.jpg" alt="Perfumes">
             <h3>Perfumes</h3>
 </div>
- <div class="card">
+ <div class="card coming-soon">
     <img src="image/bag.jpg" alt="Ladies Bags">
     <h3>Ladies Bags</h3>
 </div>
-<div class="card">
+<div class="card coming-soon">
     <img src="image/anime.jpg" alt="Anime Figures">
     <h3>Anime Figures</h3>
 </div>
@@ -73,11 +102,11 @@
     <h3>Diecast Cars</h3>
 </div>
 </a>
-<div class="card">
+<div class="card coming-soon">
     <img src="image/keychains.jpg" alt="Keychains">
     <h3>Keychains</h3>
 </div>
-<div class="card">
+<div class="card coming-soon">
     <img src="image/gift.jpg" alt="Gift Collection">
     <h3>Gift Collection</h3>
 </div>
@@ -97,7 +126,11 @@ Visit our store for quality products and friendly service.
 
     <h2>Contact Us</h2>
 
-    <p><strong>📞 Phone:</strong> 9526112374</p>
+    <p><strong>📤 Email ID:</strong> 
+    <a href="shinesnakshatra@gmail.com" target="_blank">
+        shinesnakshatra@gmail.com
+    </a>
+    </p>
 
     <p>
         <strong>📷 Instagram:</strong>
@@ -105,13 +138,21 @@ Visit our store for quality products and friendly service.
             @_mini_cache_
         </a>
     </p>
-
+ 
     <p>
         <strong>💬 WhatsApp:</strong>
         <a href="https://wa.me/919526112374" target="_blank">
             Chat on WhatsApp
         </a>
     </p>
+
+    <p>
+        <strong>📍 Location:</strong>
+        <a href="https://maps.app.goo.gl/Ty2HweXtNGG7GUZC7?g_st=ac" target="_blank">
+           Shines Gift Palace Omalloor
+        </a>
+    </p>
+
 
 </section>
 
