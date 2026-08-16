@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FACESCANDADA Comfy Matte Velvet Touch Lipstick</title>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.product {
+    max-width: 1100px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+.details {
+    flex: 1;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.price {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.price del {
+    color: #888;
+    margin-right: 10px;
+}
+
+.price span {
+    color: #e91e63;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.selected-shade {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.shade-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    max-width: 500px;
+}
+
+.shade-item {
+    width: 75px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.shade-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid transparent;
+    display: block;
+    margin: 0 auto 6px;
+    transition: border-color 0.15s, transform 0.15s;
+}
+
+.shade-item:hover img {
+    transform: scale(1.08);
+}
+
+.shade-item.active img {
+    border-color: #e91e63;
+}
+
+.shade-item span {
+    font-size: 11px;
+    line-height: 1.2;
+    display: block;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.btn.sold-out {
+    background: gray;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .product {
+        flex-direction: column;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .product-image {
+        max-width: 280px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .price,
+    .selected-shade {
+        text-align: center;
+    }
+
+    .shade-grid {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="product">
+
+    <!-- Main Product Image -->
+    <div>
+        <img
+            id="productImage"
+            class="product-image"
+            src="facescanadalipstick/Red Velvet Cake 01.png"
+            alt="Comfy Matte Velvet Touch Lipstick"
+        >
+    </div>
+
+    <!-- Product Details -->
+    <div class="details">
+
+        <h1>
+           Comfy Matte Wow Liquid Lipstick
+        </h1>
+
+        <p class="price">
+            <del>&#8377;449</del>
+            <span>&#8377;400</span>
+        </p>
+
+        <p class="selected-shade">
+            Selected Shade:
+            <b id="shadeName">Red Velvet Cake 01</b>
+        </p>
+
+        <br>
+
+        <!-- Shade Selection -->
+        <div class="shade-grid" id="shadeGrid">
+
+            <div
+                class="shade-item active"
+                data-shade="Red Velvet Cake 01"
+                data-image="facescanadalipstick/Red Velvet Cake 01.png"
+            >
+                <img
+                    src="facescanadalipstick/Red Velvet Cake 01.png"
+                    alt="Red Velvet Cake 01"
+                >
+                <span>Red Velvet Cake 01</span>
+            </div>
+
+            <div
+                class="shade-item"
+                data-shade="Cherry Pie 02"
+                data-image="facescanadalipstick/Cherry Pie 02.png"
+            >
+                <img
+                    src="facescanadalipstick/Cherry Pie 02.png"
+                    alt="Cherry Pie 02"
+                >
+                <span>Cherry Pie 02</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Pink Biscoff 03"
+                data-image="facescanadalipstick/Pink Biscoff 03.png"
+            >
+                <img
+                    src="facescanadalipstick/Pink Biscoff 03.png"
+                    alt="Pink Biscoff 03"
+                >
+                <span>Pink Biscoff 03</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Berry Smoothie 04"
+                data-image="facescanadalipstick/Berry Smoothie 04.png"
+            >
+                <img
+                    src="facescanadalipstick/Berry Smoothie 04.png"
+                    alt="Berry Smoothie 04"
+                >
+                <span>Berry Smoothie 04</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Pink Lemonade 05"
+                data-image="facescanadalipstick/Pink Lemonade 05.png"
+            >
+                <img
+                    src="facescanadalipstick/Pink Lemonade 05.png"
+                    alt="Pink Lemonade 05"
+                >
+                <span>Pink Lemonade 05</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Cocoa Truffle 06"
+                data-image="facescanadalipstick/Cocoa Truffle 06.png"
+            >
+                <img
+                    src="facescanadalipstick/Cocoa Truffle 06.png"
+                    alt="Cocoa Truffle 06"
+                >
+                <span>Cocoa Truffle 06</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Peach Cobbler 07"
+                data-image="facescanadalipstick/Peach Cobbler 07.png"
+            >
+                <img
+                    src="facescanadalipstick/Peach Cobbler 07.png"
+                    alt="Peach Cobbler 07"
+                >
+                <span>Peach Cobbler 07</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Toffee Drizzle 08"
+                data-image="facescanadalipstick/Toffee Drizzle 08.png"
+            >
+                <img
+                    src="facescanadalipstick/Toffee Drizzle 08.png"
+                    alt="Toffee Drizzle 08"
+                >
+                <span>Toffee Drizzle 08</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Rose Macaron 09"
+                data-image="facescanadalipstick/Rose Macaron 09.png"
+            >
+                <img
+                    src="facescanadalipstick/Rose Macaron 09.png"
+                    alt="Rose Macaron 09"
+                >
+                <span>Rose Macaron 09</span>
+            </div>
+              <div
+                class="shade-item"
+                data-shade="Strawberry Shortcake 10"
+                data-image="facescanadalipstick/Strawberry Shortcake 10.png"
+            >
+                <img
+                    src="facescanadalipstick/Strawberry Shortcake 10.png"
+                    alt="Strawberry Shortcake 10"
+                >
+                <span>Strawberry Shortcake 10</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Raspberry Sorbet 11"
+                data-image="facescanadalipstick/Raspberry Sorbet 11.png"
+            >
+                <img
+                    src="facescanadalipstick/Raspberry Sorbet 11.png"
+                    alt="Raspberry Sorbet 11"
+                >
+                <span>Raspberry Sorbet 11</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Acai Parfait 12"
+                data-image="facescanadalipstick/Acai Parfait 12.png"
+            >
+                <img
+                    src="facescanadalipstick/Acai Parfait 12.png"
+                    alt="Acai Parfait 12"
+                >
+                <span>Acai Parfait 12</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Cranberry Compote 13"
+                data-image="facescanadalipstick/Cranberry Compote 13.png"
+            >
+                <img
+                    src="facescanadalipstick/Cranberry Compote 13.png"
+                    alt="Cranberry Compote 13"
+                >
+                <span>Cranberry Compote 13</span>
+            </div>
+            <div
+                class="shade-item"
+                data-shade="Mocha Mousse 14"
+                data-image="facescanadalipstick/Mocha Mousse 14.png"
+            >
+                <img
+                    src="facescanadalipstick/Mocha Mousse 14.png"
+                    alt="Mocha Mousse 14"
+                >
+                <span>Mocha Mousse 14</span>
+            </div>
+              <div
+                class="shade-item"
+                data-shade="Apricot Jam 15"
+                data-image="facescanadalipstick/Apricot Jam 15.png"
+            >
+                <img
+                    src="facescanadalipstick/Apricot Jam 15.png"
+                    alt="Apricot Jam 15"
+                >
+                <span>Apricot Jam 15</span>
+            </div>
+            
+        </div>
+
+        <a href="#" class="btn">Order on WhatsApp</a>
+
+    </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.shade-item').forEach(function (item) {
+    item.addEventListener('click', function () {
+        document.querySelectorAll('.shade-item').forEach(function (i) {
+            i.classList.remove('active');
+        });
+        item.classList.add('active');
+        document.getElementById('productImage').src = item.getAttribute('data-image');
+        document.getElementById('shadeName').textContent = item.getAttribute('data-shade');
+    });
+});
+</script>
+
+</body>
+</html>
