@@ -3,172 +3,152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dazller 9ml Nail Polish</title>
+
+<title>Blue Heaven Hyper Matte Foundation SPF 25 PA++ 30ml</title>
+
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-body {
-    background: #f5f5f5;
-    padding: 20px;
+body{
+background:#f5f5f5;
+padding:20px;
 }
 
-.product {
-    max-width: 1100px;
-    margin: auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+.product{
+max-width:1100px;
+margin:auto;
+background:#fff;
+padding:30px;
+border-radius:12px;
+display:flex;
+gap:40px;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
-.product-image {
-    width: 100%;
-    max-width: 380px;
-    border-radius: 10px;
-    display: block;
-    margin: auto;
+.product img{
+width:100%;
+max-width:380px;
+border-radius:10px;
+display:block;
+margin:auto;
 }
 
-.details {
-    flex: 1;
+.details{
+flex:1;
 }
 
-h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
+h1{
+font-size:32px;
+margin-bottom:20px;
 }
 
-.price {
-    margin: 15px 0;
-    font-size: 20px;
+.price{
+margin:15px 0;
+font-size:20px;
 }
 
-.price del {
-    color: #888;
-    margin-right: 10px;
+.price del{
+color:#888;
+margin-right:10px;
 }
 
-.price span {
-    color: #e91e63;
-    font-size: 30px;
-    font-weight: bold;
+.price span{
+color:#e91e63;
+font-size:30px;
+font-weight:bold;
 }
 
-.selected-shade {
-    margin-top: 15px;
-    font-size: 16px;
+.shade-grid{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:10px;
+max-width:420px;
 }
 
-.shade-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 15px;
-    max-width: 500px;
+.shade-item{
+width:70px;
+text-align:center;
+cursor:pointer;
 }
 
-.shade-item {
-    width: 75px;
-    text-align: center;
-    cursor: pointer;
+.shade-item img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid transparent;
+display:block;
+margin:0 auto 6px;
+transition:border-color .15s, transform .15s;
 }
 
-.shade-item img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid transparent;
-    display: block;
-    margin: 0 auto 6px;
-    transition: border-color 0.15s, transform 0.15s;
+.shade-item:hover img{
+transform:scale(1.05);
 }
 
-.shade-item:hover img {
-    transform: scale(1.08);
+.shade-item.active img{
+border-color:#e91e63;
 }
 
-.shade-item.active img {
-    border-color: #e91e63;
+.shade-item span{
+font-size:11px;
+line-height:1.2;
+display:block;
+color:#333;
 }
 
-.shade-item span {
-    font-size: 11px;
-    line-height: 1.2;
-    display: block;
-    color: #333;
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 28px;
+background:#25D366;
+color:#fff;
+text-decoration:none;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 28px;
-    background: #25D366;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: 0.2s;
+@media(max-width:768px){
+
+.product{
+flex-direction:column;
+padding:20px;
 }
 
-.btn:hover {
-    opacity: 0.9;
-    transform: scale(1.02);
+.product img{
+max-width:280px;
 }
 
-.btn.sold-out {
-    background: gray;
-    pointer-events: none;
-    cursor: not-allowed;
+h1{
+font-size:24px;
+text-align:center;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+.price,
+p{
+text-align:center;
+}
 
-    body {
-        padding: 10px;
-    }
+.shade-grid{
+max-width:100%;
+justify-content:center;
+}
 
-    .product {
-        flex-direction: column;
-        padding: 20px;
-        gap: 25px;
-    }
+.btn{
+display:block;
+width:100%;
+text-align:center;
+}
 
-    .product-image {
-        max-width: 280px;
-    }
-
-    h1 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .price,
-    .selected-shade {
-        text-align: center;
-    }
-
-    .shade-grid {
-        max-width: 100%;
-        justify-content: center;
-    }
-
-    .btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
 }
 
 </style>
@@ -179,211 +159,102 @@ h1 {
 
 <div class="product">
 
-    <!-- Main Product Image -->
-    <div>
-        <img
-            id="productImage"
-            class="product-image"
-            src="dazllernailpolish80/6001wildwatermelon.jpeg"
-            alt="Dazller 9ml Nail Polish"
-        >
-    </div>
+<img id="productImage" 
+src="blueheaven/honey.jpeg"
+alt="blueheaven">
 
-    <!-- Product Details -->
-    <div class="details">
+<div class="details">
 
-        <h1>
-            Dazller 9ml Nail Polish
-        </h1>
+<h1>Blue Heaven Hyper Matte Foundation SPF 25 PA++ 30ml</h1>
 
-        <p class="price">
-            <del>&#8377;80</del>
-            <span>&#8377;75</span>
-        </p>
+<p class="price">
+<del>₹300</del> 
+<span>₹265</span>
 
-        <p class="selected-shade">
-            Selected Shade:
-            <b id="shadeName">6001 WildWatermelon</b>
-        </p>
+</p>
+Selected Shade: 
+<b id="shadeName">501 Honey</b>
+</p>
 
-        <br>
+<br>
 
-        <!-- Shade Selection -->
-        <div class="shade-grid" id="shadeGrid">
+<div class="shade-grid" id="shadeGrid">
 
-            <div class="shade-item active" data-shade="6001 WildWatermelon" data-image="dazllernailpolish80/6001wildwatermelon.jpeg">
-                <img src="dazllernailpolish80/6001wildwatermelon.jpeg" alt="6001 WildWatermelon">
-                <span>6001 WildWatermelon</span>
-            </div>
-            <div class="shade-item" data-shade="6002 BrightFuschia" data-image="dazllernailpolish80/6002brightfuschia.jpeg">
-                <img src="dazllernailpolish80/6002brightfuschia.jpeg" alt="6002 BrightFuschia">
-                <span>6002 BrightFuschia</span>
-            </div>
-            <div class="shade-item" data-shade="6003 MediumOrchid" data-image="dazllernailpolish80/6003mediumOrchid.jpeg">
-                <img src="dazllernailpolish80/6003mediumOrchid.jpeg" alt="6003 MediumOrchid">
-                <span>6003 MediumOrchid</span>
-            </div>
-            <div class="shade-item" data-shade="6004 LightOrchid" data-image="dazllernailpolish80/6004lightOrchid.jpeg">
-                <img src="dazllernailpolish80/6004lightOrchid.jpeg" alt="6004 LightOrchid">
-                <span>6004 LightOrchid</span>
-            </div>
-            <div class="shade-item" data-shade="6005 PaleVioletRed" data-image="dazllernailpolish80/6005paleVioletRed.jpeg">
-                <img src="dazllernailpolish80/6005paleVioletRed.jpeg" alt="6005 PaleVioletRed">
-                <span>6005 PaleVioletRed</span>
-            </div>
-            <div class="shade-item" data-shade="6006 RavalViolet" data-image="dazllernailpolish80/6006ravalViolet.jpeg">
-                <img src="dazllernailpolish80/6006ravalViolet.jpeg" alt="6006 RavalViolet">
-                <span>6006 RavalViolet</span>
-            </div>
-            <div class="shade-item" data-shade="6008 MildMauve" data-image="dazllernailpolish80/6008mildMauve.jpeg">
-                <img src="dazllernailpolish80/6008mildMauve.jpeg" alt="6008 MildMauve">
-                <span>6008 MildMauve</span>
-            </div>
-            <div class="shade-item" data-shade="6009 MildRoyalBlue" data-image="dazllernailpolish80/6009mildRoyalBlue.jpeg">
-                <img src="dazllernailpolish80/6009mildRoyalBlue.jpeg" alt="6009 MildRoyalBlue">
-                <span>6009 MildRoyalBlue</span>
-            </div>
-            <div class="shade-item" data-shade="6010 Esmeralda" data-image="dazllernailpolish80/6010esmeralda.jpeg">
-                <img src="dazllernailpolish80/6010esmeralda.jpeg" alt="6010 Esmeralda">
-                <span>6010 Esmeralda</span>
-            </div>
-            <div class="shade-item" data-shade="6012 Clear" data-image="dazllernailpolish80/6012clear.jpeg">
-                <img src="dazllernailpolish80/6012clear.jpeg" alt="6012 Clear">
-                <span>6012 Clear</span>
-            </div>
-            <div class="shade-item" data-shade="6013 BoldBlack" data-image="dazllernailpolish80/6013boldBlack.jpeg">
-                <img src="dazllernailpolish80/6013boldBlack.jpeg" alt="6013 BoldBlack">
-                <span>6013 BoldBlack</span>
-            </div>
-            <div class="shade-item" data-shade="6014 WhiteMight" data-image="dazllernailpolish80/6014whiteMight.jpeg">
-                <img src="dazllernailpolish80/6014whiteMight.jpeg" alt="6014 WhiteMight">
-                <span>6014 WhiteMight</span>
-            </div>
-            <div class="shade-item" data-shade="6015 RojoPearl" data-image="dazllernailpolish80/6015rojoPearl.jpeg">
-                <img src="dazllernailpolish80/6015rojoPearl.jpeg" alt="6015 RojoPearl">
-                <span>6015 RojoPearl</span>
-            </div>
-            <div class="shade-item" data-shade="6017 MaraschinoRed" data-image="dazllernailpolish80/6017maraschinoRed.jpeg">
-                <img src="dazllernailpolish80/6017maraschinoRed.jpeg" alt="6017 MaraschinoRed">
-                <span>6017 MaraschinoRed</span>
-            </div>
-            <div class="shade-item" data-shade="6018 CayenneRed" data-image="dazllernailpolish80/6018cayenneRed.jpeg">
-                <img src="dazllernailpolish80/6018cayenneRed.jpeg" alt="6018 CayenneRed">
-                <span>6018 CayenneRed</span>
-            </div>
-            <div class="shade-item" data-shade="6019 MaroonMole" data-image="dazllernailpolish80/6019maroonMole.jpeg">
-                <img src="dazllernailpolish80/6019maroonMole.jpeg" alt="6019 MaroonMole">
-                <span>6019 MaroonMole</span>
-            </div>
-            <div class="shade-item" data-shade="6020 TameTurquoise" data-image="dazllernailpolish80/6020tameTurquoise.jpeg">
-                <img src="dazllernailpolish80/6020tameTurquoise.jpeg" alt="6020 TameTurquoise">
-                <span>6020 TameTurquoise</span>
-            </div>
-            <div class="shade-item" data-shade="6023 DarkBrick" data-image="dazllernailpolish80/6023darkBrick.jpeg">
-                <img src="dazllernailpolish80/6023darkBrick.jpeg" alt="6023 DarkBrick">
-                <span>6023 DarkBrick</span>
-            </div>
-            <div class="shade-item" data-shade="6024 MediumMaroon" data-image="dazllernailpolish80/6024mediumMaroon.jpeg">
-                <img src="dazllernailpolish80/6024mediumMaroon.jpeg" alt="6024 MediumMaroon">
-                <span>6024 MediumMaroon</span>
-            </div>
-            <div class="shade-item" data-shade="6025 LilacPastel" data-image="dazllernailpolish80/6025lilacPastel.jpeg">
-                <img src="dazllernailpolish80/6025lilacPastel.jpeg" alt="6025 LilacPastel">
-                <span>6025 LilacPastel</span>
-            </div>
-            <div class="shade-item" data-shade="6030 Operamauve" data-image="dazllernailpolish80/6030operamauve.jpeg">
-                <img src="dazllernailpolish80/6030operamauve.jpeg" alt="6030 Operamauve">
-                <span>6030 Operamauve</span>
-            </div>
-            <div class="shade-item" data-shade="6037 GrapeJam" data-image="dazllernailpolish80/6037grapeJam.jpeg">
-                <img src="dazllernailpolish80/6037grapeJam.jpeg" alt="6037 GrapeJam">
-                <span>6037 GrapeJam</span>
-            </div>
-            <div class="shade-item" data-shade="6047 Tearose" data-image="dazllernailpolish80/6047tearose.jpeg">
-                <img src="dazllernailpolish80/6047tearose.jpeg" alt="6047 Tearose">
-                <span>6047 Tearose</span>
-            </div>
-            <div class="shade-item" data-shade="6050 SoftgreenTea" data-image="dazllernailpolish80/6050softgreenTea.jpeg">
-                <img src="dazllernailpolish80/6050softgreenTea.jpeg" alt="6050 SoftgreenTea">
-                <span>6050 SoftgreenTea</span>
-            </div>
-            <div class="shade-item" data-shade="6055 OldRose" data-image="dazllernailpolish80/6055oldRose.jpeg">
-                <img src="dazllernailpolish80/6055oldRose.jpeg" alt="6055 OldRose">
-                <span>6055 OldRose</span>
-            </div>
-            <div class="shade-item" data-shade="6062 MoonRiverBlue" data-image="dazllernailpolish80/6062moonRiverBlue.jpeg">
-                <img src="dazllernailpolish80/6062moonRiverBlue.jpeg" alt="6062 MoonRiverBlue">
-                <span>6062 MoonRiverBlue</span>
-            </div>
-            <div class="shade-item" data-shade="6063 DazzlingBlue" data-image="dazllernailpolish80/6063dazzlingBlue.jpeg">
-                <img src="dazllernailpolish80/6063dazzlingBlue.jpeg" alt="6063 DazzlingBlue">
-                <span>6063 DazzlingBlue</span>
-            </div>
-            <div class="shade-item" data-shade="6064 HunterGreen" data-image="dazllernailpolish80/6064hunterGreen.jpeg">
-                <img src="dazllernailpolish80/6064hunterGreen.jpeg" alt="6064 HunterGreen">
-                <span>6064 HunterGreen</span>
-            </div>
-            <div class="shade-item" data-shade="6065 GreenGarnish" data-image="dazllernailpolish80/6065greenGarnish.jpeg">
-                <img src="dazllernailpolish80/6065greenGarnish.jpeg" alt="6065 GreenGarnish">
-                <span>6065 GreenGarnish</span>
-            </div>
-            <div class="shade-item" data-shade="6066 StirringYellow" data-image="dazllernailpolish80/6066stirringYellow.jpeg">
-                <img src="dazllernailpolish80/6066stirringYellow.jpeg" alt="6066 StirringYellow">
-                <span>6066 StirringYellow</span>
-            </div>
-            <div class="shade-item" data-shade="6067 DarkGarnet" data-image="dazllernailpolish80/6067darkGarnet.jpeg">
-                <img src="dazllernailpolish80/6067darkGarnet.jpeg" alt="6067 DarkGarnet">
-                <span>6067 DarkGarnet</span>
-            </div>
-            <div class="shade-item" data-shade="6100" data-image="dazllernailpolish80/6100.jpeg">
-                <img src="dazllernailpolish80/6100.jpeg" alt="6100">
-                <span>6100</span>
-            </div>
+<div class="shade-item active" data-shade="501 Honey">
+<img src="blueheaven/honey.jpeg" alt="501 Honey">
+<span>501 Honey</span>
+</div>
 
-        </div>
+<div class="shade-item" data-shade="Natural Fair + Yellow">
+<img src="blueheaven/natural.jpeg" alt="Natural Fair + Yellow">
+<span>Natural Fair + Yellow</span>
+</div>
 
-        <br>
-        <a id="orderBtn" class="btn" href="#">Order on WhatsApp</a>
+<div class="shade-item" data-shade="101 Vanilla">
+<img src="blueheaven/vanilla.jpeg" alt="101 Vanilla">
+<span>101 Vanilla</span>
+</div>
 
-    </div>
+<div class="shade-item" data-shade="201 Rose Vanilla">
+<img src="blueheaven/rosevanilla.jpeg" alt="201 Rose Vanilla">
+<span>201 Rose Vanilla</span>
+</div>
+
+<div class="shade-item" data-shade="401 Natural Sand">
+<img src="blueheaven/naturalsand.jpeg" alt="401 Natural Sand">
+<span>401 Natural Sand</span>
+</div>
+
+</div>
+<br>
+<a id="orderBtn" class="btn" href="#">
+Order on WhatsApp
+</a>
 
 </div>
 
+</div>
 <script>
 const shadeItems = document.querySelectorAll(".shade-item");
 const img = document.getElementById("productImage");
 const nameEl = document.getElementById("shadeName");
 const btn = document.getElementById("orderBtn");
 
-const shadeImages = {};
-shadeItems.forEach(function (item) {
-    shadeImages[item.dataset.shade] = item.dataset.image;
+const shadeImages = {
+
+    "501 Honey":"blueheaven/honey.jpeg",
+    "Natural Fair + Yellow":"blueheaven/natural.jpeg",
+    "101 Vanilla":"blueheaven/vanilla.jpeg",
+    "201 Rose Vanilla":"blueheaven/rosevanilla.jpeg",
+    "401 Natural Sand":"blueheaven/naturalsand.jpeg",
+};
+
+function update(s){
+
+    img.src=shadeImages[s];
+    nameEl.textContent=s;
+
+
+shadeItems.forEach(function(item){
+item.classList.toggle("active", item.dataset.shade===s);
 });
+    btn.innerHTML="Order on WhatsApp";
+    btn.style.background="#25D366";
+    btn.style.pointerEvents="auto";
 
-function update(s) {
-    img.src = shadeImages[s];
-    nameEl.textContent = s;
-
-    shadeItems.forEach(function (item) {
-        item.classList.toggle("active", item.dataset.shade === s);
-    });
-
-    btn.innerHTML = "Order on WhatsApp";
-    btn.style.background = "#25D366";
-    btn.style.pointerEvents = "auto";
-
-    btn.href = "https://wa.me/919946552836?text=" + encodeURIComponent(
-        "Hi, I want to order Dazller 9ml Nail Polish\nShade: " + s
+    btn.href ="https://wa.me/919946552836?text=" +encodeURIComponent(
+    "Hi, I want to order MARS SPF50 PA++++ High Coverage Liquid Foundation\nShade: " + s
     );
 }
 
-shadeItems.forEach(function (item) {
-    item.addEventListener("click", function () {
-        update(item.dataset.shade.trim());
-    });
+shadeItems.forEach(function(item){
+item.addEventListener("click",function(){
+update(item.dataset.shade);
+});
 });
 
-update("6001 WildWatermelon");
+update("501 Honey");
+
 </script>
 
 </body>
