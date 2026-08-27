@@ -325,23 +325,61 @@ h1 {
             
         </div>
 
-        <a href="#" class="btn">Order on WhatsApp</a>
-
-    </div>
+       <br>
+<a id="orderBtn" class="btn" href="#">
+Order on WhatsApp
+</a>
 
 </div>
 
+</div>
 <script>
-document.querySelectorAll('.shade-item').forEach(function (item) {
-    item.addEventListener('click', function () {
-        document.querySelectorAll('.shade-item').forEach(function (i) {
-            i.classList.remove('active');
-        });
-        item.classList.add('active');
-        document.getElementById('productImage').src = item.getAttribute('data-image');
-        document.getElementById('shadeName').textContent = item.getAttribute('data-shade');
-    });
+const shadeItems = document.querySelectorAll(".shade-item");
+const img = document.getElementById("productImage");
+const nameEl = document.getElementById("shadeName");
+const btn = document.getElementById("orderBtn");
+
+const shadeImages = {
+
+    "Choco Couture 01":"facescanadaliquidlipstick/Choco Couture 01.png",
+    "Mauve Majesty 02":"facescanadaliquidlipstick/Mauve Majesty 02.png",
+    "Ruby Rouge 03":"facescanadaliquidlipstick/Ruby Rouge 03.png",
+    "Plum Passion 04":"facescanadaliquidlipstick/Plum Passion 04.png",
+    "Maroon Maven 05":"facescanadaliquidlipstick/Maroon Maven 05.png",
+    "Fuschia Fun 06":"facescanadaliquidlipstick/Fuschia Fun 06.png",
+    "Cocoa Crush 07":"facescanadaliquidlipstick/Cocoa Crush 07.png",
+    "Nude Nectar 08":"facescanadaliquidlipstick/Nude Nectar 08.png",
+    "Pink Petal 09":"facescanadaliquidlipstick/Pink Petal 09.png",
+    "Orchid Opulence 10":"facescanadaliquidlipstick/Orchid Opulence 10.png",
+
+};
+
+function update(s){
+
+    img.src=shadeImages[s];
+    nameEl.textContent=s;
+
+
+shadeItems.forEach(function(item){
+item.classList.toggle("active", item.dataset.shade===s);
 });
+    btn.innerHTML="Order on WhatsApp";
+    btn.style.background="#25D366";
+    btn.style.pointerEvents="auto";
+
+    btn.href ="https://wa.me/919946552836?text=" +encodeURIComponent(
+    "Hi, I want to order FACESCANDADA Comfy Matte Wow Liquid Lipstick\nShade: " + s
+    );
+}
+
+shadeItems.forEach(function(item){
+item.addEventListener("click",function(){
+update(item.dataset.shade);
+});
+});
+
+update("Choco Couture 01");
+
 </script>
 
 </body>
